@@ -1,0 +1,24 @@
+.courseCont{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e0dddd;
+    padding: 30px 10px 50px;
+    border-radius: 5px;
+}
+
+.courseCont:hover{
+    border-color: #0B86FF;
+}
+
+.courseCont img{
+    height: 170px;
+    width: 220px;
+}
+
+.courseCont p{
+    margin-top: 30px;
+    font-size: 24px;
+}

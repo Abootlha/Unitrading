@@ -1,0 +1,21 @@
+.video_linear_card{
+    border: 2px solid #c9c9c9;
+    display: flex;
+    padding: 10px 15px;
+    gap: 15px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    background-color: #f1f3f8;
+    transition: ease-in 0.3s;
+}
+
+.video_linear_card:hover{
+    border-color: #0B86FF;
+    background-color: #FFFFFF;
+}
+
+.video_linear_card img{
+    width: 20px;
+    height: 20px;
+}
+

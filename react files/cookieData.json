@@ -1,0 +1,86 @@
+[
+   {
+    "name": "PHPSESSID",
+    "purpose": "Native to PHP and enables websites to store serialised state data.",
+    "duration": "Session",
+    "type": "Essential"
+    
+   },
+
+   {
+    "name": "cookie_notice_accepted",
+    "purpose": "Used to see whether the cookie notice has been accepted.",
+    "duration": "1 month",
+    "type": "Essential"
+   },
+
+   {
+    "name": "dsp",
+    "purpose": "Used to track the latest DSP the user same from.",
+    "duration": "3 hours",
+    "type": "Essential"
+   },
+
+   {
+    "name": "externalParams",
+    "purpose": "Used to track any external parameters set by third party integrations or any other data not being tracked in any other way..",
+    "duration": "3 hours",
+    "type": "Essential"
+   },
+
+   {
+    "name": "f",
+    "purpose": "Used to track the latest funnel the user came from.",
+    "duration": "3 hours",
+    "type": "Essential"
+   },
+
+   {
+    "name": "uf",
+    "purpose": "Used to track the unknown funnel the user came from.",
+    "duration": "3 hours",
+    "type": "Essential"
+   },
+
+   {
+    "name": "uuid",
+    "purpose": "Stores a universally unique identifier  allowing the tracking of the same visitor across multiple pages and sessions.",
+    "duration": "730 days",
+    "type": "Essential"
+   },
+
+   { 
+    "name": "woocommerce_cart_hash",
+    "purpose": "Helps WooCommerce determine when cart contents/data changes.",
+    "duration": "Session",
+    "type": "Essential"
+   },
+
+   {
+    "name": "woocommerce_items_in_cart",
+    "purpose": "Helps WooCommerce determine when cart contents/data changes.",
+    "duration": "Session",
+    "type": "Essential"
+   },
+
+   {
+    "name": "wordpress_logged_in_{UID}",
+    "purpose": "Remember User session",
+    "duration": "Session",
+    "type": "Essential"
+   },
+
+   {
+    "name": "wordpress_sec_{UID}",
+    "purpose": "This cookie is used to store your authentication details.",
+    "duration": "Session",
+    "type": "Essential"
+   },
+
+   {
+    "name": "wp_woocommerce_session_{UID}",
+    "purpose": "Contains a unique code for each customer so that it knows where to find the cart data in the database for each customer.",
+    "duration": "2 days",
+    "type": "Essential"
+   }
+]

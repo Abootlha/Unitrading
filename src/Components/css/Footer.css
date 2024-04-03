@@ -1,0 +1,69 @@
+/* Footer.css */
+
+.footer {
+  background-color: #0B86FF;
+  color: #fff;
+  padding: 140px 0;
+  position: absolute;
+  top: 500%;
+  width: 100%;
+  left: 0; /* Move the footer to the left */
+  margin: 0 auto; 
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  flex: 1 1 auto;
+  margin: 0 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Display the list items horizontally */
+}
+
+.footer-section ul li {
+  margin-right: 20px; /* Add some space between list items */
+}
+
+.footer-section ul li:last-child {
+  margin-right: 0; /* Remove margin for the last list item */
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: #0B86FF;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+ul.absolute li a {
+  text-decoration: none; /* Remove default underline */
+  position: relative; /* Establish positioning context */
+}
+
+ul.absolute li a:hover::after {
+  content: ''; /* Empty content */
+  position: absolute; /* Position absolutely within the link */
+  left: 0; /* Align with the left edge of the link */
+  bottom: -2px; /* Move it just below the text */
+  width: 100%; /* Extend to full width of the link */
+  height: 1.5px; /* Set the height of the underline */
+  background-color: #fff; /* Color of the underline */
+}

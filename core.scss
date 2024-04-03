@@ -1,0 +1,569 @@
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+  }
+  
+  .aligncenter,
+  div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+  }
+  
+  .alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+  
+  .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+  
+  a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+  }
+  
+  a img.alignnone {
+    margin: 5px 20px 20px 0;
+  }
+  
+  a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+  }
+  
+  a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+  }
+  
+  .wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+  }
+  
+  .wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+  }
+  
+  .wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+  }
+  
+  .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+  }
+  
+  .wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+  }
+  
+  /* Text meant only for screen readers. */
+  .screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+  
+  .screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: $font-main, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+    min-width: 320px;
+    line-height: 24px;
+    color: $text-color-main;
+  }
+  
+  main {
+    min-height: calc(100vh - 255px - 71px);
+    overflow-x: hidden;
+    background-color: $bg-body;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $btn-bg-color;
+  
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  
+  p {
+    color: $text-color-second;
+    margin-bottom: 16px;
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  label {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+  
+    margin-bottom: 16px;
+    display: block;
+  
+    span {
+    }
+  
+    &.optional {
+      span {
+      }
+    }
+  }
+  
+  input:not([type="checkbox"]),
+  textarea {
+    background: $input-bg-color !important;
+    border: 1px solid $input-border-color !important;
+    border-radius: 10px !important;
+    min-height: 48px;
+    padding: 8px 12px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    color: $text-color-main;
+  
+    &:focus {
+      outline: none;
+      border-color: $input-border-focus-color !important;
+    }
+  }
+  
+  button[type="submit"],
+  input[type="submit"] {
+    @include btn;
+  }
+  
+  textarea {
+    min-height: 87px;
+    resize: vertical;
+  }
+  
+  .btn {
+    @include btn;
+  
+    &__invert {
+      @include btn-invert;
+    }
+  }
+  
+  .h1,
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  
+  .h2,
+  h2 {
+    margin-bottom: 64px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    margin-top: 0;
+  }
+  
+  .home {
+    h1,
+    .h1 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  
+    .h2,
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      margin-bottom: 64px;
+    }
+  
+    main {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .h3,
+  h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 140%;
+    color: $text-color-main;
+    margin: 0 0 16px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .d-flex {
+    display: flex;
+  }
+  
+  
+  .content {
+    ul {
+      padding-left: 25px;
+      margin-bottom: 16px;
+  
+      li {
+        position: relative;
+        margin-bottom: 8px;
+  
+        &::before {
+          content: "";
+          display: block;
+          width: 2px;
+          height: 2px;
+          border-radius: 100%;
+          background-color: transparent;
+          left: -16px;
+          position: absolute;
+          top: 12px;
+        }
+      }
+  
+      .li-tag {
+        &::before {
+          background-color: $text-color-main !important;
+        }
+      }
+  
+    }
+  }
+  
+  
+  header, footer {
+    ul {
+      padding: 0;
+      margin: 0;
+  
+      li {
+        margin: 0;
+  
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  
+  .um {
+    margin-bottom: 0 !important;
+  
+    .um-account-side li a.current span.um-account-icon {
+      color: $btn-bg-color;
+    }
+  
+    .um-col-alt {
+      padding: 0;
+    }
+    .um-account-tab .um-field .um-field-label {
+      margin-bottom: 0;
+    }
+  
+    .um-account-meta {
+      display: none;
+    }
+  
+    .um-account-side li {
+      background-color: $bg-body-second;
+    }
+  
+    .um-account-side li a:hover {
+      background-color: $bg-body-second;
+    }
+  
+    .um-account-main div.um-account-heading i {
+      color: $btn-bg-color;
+    }
+  
+    .um-account-main div.um-account-heading {
+      color: $text-color-main;
+    }
+  
+    .um-account-side li a span.um-account-title {
+      color: $text-color-main;
+    }
+  
+    .um-form input[type="text"],
+    .um-form input[type="search"],
+    .um-form input[type="tel"],
+    .um-form input[type="number"],
+    .um-form input[type="password"],
+    .um-form textarea,
+    .select2-container .select2-choice,
+    .select2-container-multi .select2-choices,
+    input[type="text"],
+    input[type="tel"],
+    input[type="password"],
+    input[type="email"] {
+      border: 1px solid $input-border-color !important;
+      border-radius: 10px;
+      padding: 0 12px !important;
+      width: 100%;
+      display: block;
+      cursor: text !important;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 150%;
+      height: 40px !important;
+      box-sizing: border-box !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      position: static;
+      outline: none !important;
+      -webkit-appearance: none;
+      color: $text-color-main;
+  
+      &:disabled {
+        background: $input-bg-disabled-color !important;
+        border: 1px solid $input-border-color !important;
+      }
+  
+      &:focus {
+        border-color: $input-border-focus-color !important;
+      }
+    }
+  
+    .select2-container--default .select2-results__option--highlighted[aria-selected] {
+      background-color: $btn-bg-color;
+    }
+  
+    .um-field-checkbox {
+      display: flex;
+      align-items: center;
+      width: 100%;
+  
+      i {
+        display: none;
+      }
+  
+      .um-field-checkbox-option {
+        font-size: 16px;
+        color: $text-color-main !important;
+        margin-left: 12px;
+      }
+  
+      .um-field-checkbox-state {
+        position: relative;
+  
+        &:before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 24px;
+          border: 2px solid #e2e2e2;
+          border-radius: 3px;
+          top: -2px;
+          position: relative;
+        }
+      }
+  
+      input:checked {
+        & + .um-field-checkbox-state {
+          &:after {
+            content: "";
+            position: absolute;
+            background-image: url("img/check.svg");
+            display: block;
+            width: 13px;
+            height: 10px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 8px;
+            top: 7px;
+          }
+        }
+      }
+    }
+  
+    .um-field {
+      padding-top: 24px;
+  
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  
+    .um-field-label label {
+      font-weight: 300 !important;
+      font-size: 14px !important;
+      line-height: 150% !important;
+      color: $text-color-main !important;
+      margin-bottom: 12px !important;
+    }
+  
+    .um-link-alt {
+      color: $input-border-focus-color !important;
+    }
+  
+    input[type="submit"].um-button {
+      padding: 11px 24px !important;
+      background: $btn-bg-color !important;
+      border-radius: 6px !important;
+      color: $btn-text-color;
+      border: 2px solid $btn-bg-color !important;
+      transition: 0.3s;
+      display: inline-flex;
+      text-transform: uppercase !important;
+      width: auto;
+      font-family: $font-main, sans-serif;
+      font-weight: 600 !important;
+      font-size: 16px;
+      line-height: 150%;
+  
+      &:hover {
+        background: transparent !important;
+        color: $text-color-main !important;
+      }
+    }
+  
+    &-login {
+      .um-right {
+        display: none;
+      }
+  
+      .um-left {
+        float: right;
+        text-align: right;
+      }
+    }
+  
+    &-register {
+      .um-right {
+        display: none;
+      }
+  
+      .um-left {
+        float: right;
+        text-align: right;
+      }
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .home {
+      main {
+        padding-top: 100px;
+      }
+    }
+  
+    main {
+      padding-top: 130px;
+    }
+  
+    .overflow-hidden {
+      overflow: hidden;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .h2,
+    h2 {
+      font-size: 32px;
+    }
+  
+    .h3,
+    h3 {
+      font-size: 24px;
+    }
+  }
+  
+  @media (max-width: 769px) {
+    .home {
+      main {
+        padding-top: 80px;
+      }
+    }
+  
+    main {
+      // padding-top: 100px;
+    }
+  
+    .h2,
+    h2 {
+      font-size: 26px;
+    }
+  
+    .h3,
+    h3 {
+      font-size: 20px;
+    }
+  }
+  

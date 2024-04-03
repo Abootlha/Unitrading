@@ -1,0 +1,34 @@
+.quiz-alert {
+    width: 100%; /* Set width to 100% */
+    max-width: 1200px; /* Set maximum width */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center align text */
+    margin: 0 auto; /* Center the alert box horizontally */
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.emoji {
+    font-size: 10px !important; /* Decrease the font size of emoji */
+    margin-right: 10px;
+}
+
+.message {
+    margin-top: 10px;
+}
+
+.correct-alert {
+    background-color: rgba(136, 204, 187, .3);
+}
+
+.incorrect-alert {
+    background-color: rgba(255, 86, 86, .4);
+}
+
+.emoji svg {
+    width: 24px; /* Decrease the width of the emoji */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
+}

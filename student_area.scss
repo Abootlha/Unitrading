@@ -1,0 +1,821 @@
+.ld-course-list-items .ld_course_grid .thumbnail.course img {
+    max-width: 140px;
+    margin-bottom: 32px;
+}
+
+.ld-course-list-items .ld_course_grid .thumbnail.course {
+    background: $bg-body;
+}
+
+.ld-course-list-items .ld_course_grid .thumbnail .caption p {
+    margin-top: 0 !important;
+}
+
+.learndash-wrapper.learndash-widget .ld-progress {
+    margin-bottom: 0;
+    margin-top: 0;
+
+    .ld-progress-bar {
+        margin-bottom: 8px;
+    }
+}
+
+.learndash-wrapper.learndash-widget .ld-progress .ld-progress-heading {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    .ld-progress-stats .ld-progress-percentage {
+        font-size: 16px;
+        line-height: 24px;
+        color: $text-color-main;
+        text-align: center;
+        margin: 0 auto;
+        text-transform: capitalize;
+    }
+}
+
+.learndash-wrapper .ld-breadcrumbs .ld-status.ld-status-progress {
+    background: $btn-bg-color;
+}
+
+form + .ld-course-step-back {
+    transform: translateY(18px)
+}
+
+.learndash-wrapper .learndash_mark_complete_button, .learndash-wrapper #learndash_mark_complete_button {
+    background: $btn-bg-color !important;
+    border-radius: 6px;
+    padding: 7px 16px;
+    border: 2px solid $btn-bg-color !important;
+    margin-top: 20px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: $font-main;
+    transition: .3s;
+    color: $bg-body;
+
+    &:hover {
+        background: $bg-body !important;
+        color: $text-color-accent;
+        opacity: 1;
+    }
+}
+
+.learndash-wrapper .learndash_mark_complete_button:disabled {
+    background: $disabled-bg-second-color !important;
+    border: 2px solid $disabled-border-color !important;
+    color: $disabled-text-color;
+    cursor: initial;
+}
+
+.learndash-wrapper .sfwd-mark-complete::after, .learndash-wrapper #sfwd-mark-complete::after {
+    display: none;
+}
+
+.ld-course-list-items .ld_course_grid {
+    flex: 1 1 auto;
+    padding: 0;
+    max-width: calc(25% - 24px);
+    margin: 0 12px 24px;
+}
+
+.ld-course-list-content {
+    margin-bottom: 36px;
+
+    & + br {
+        display: none;
+    }
+}
+
+.learndash-wrapper .ld-progress .ld-progress-bar {
+    border-radius: 6px;
+    height: 4px;
+
+    .ld-progress-bar-percentage {
+        background: $btn-bg-color;
+    }
+}
+
+.learndash-wrapper .ld-button .ld-text {
+    padding: 0;
+}
+
+
+.ld-course-list-items {
+    .learndash-wrapper .ld-progress.ld-progress-inline .ld-progress-bar {
+        margin-right: 0;
+    }
+
+    .ld_course_grid {
+
+        .entry-title {
+            font-size: 18px;
+            line-height: 24px;
+            color: $text-color-main;
+            text-align: center;
+            margin-bottom: 32px !important;
+            order: 1;
+        }
+
+        .learndash-wrapper {
+            order: 2;
+        }
+
+        .ld_course_grid_button {
+            order: 3;
+
+            a.btn-primary {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                opacity: 0;
+            }
+        }
+
+        .thumbnail .caption {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .thumbnail.course {
+            padding: 24px;
+            min-height: 300px;
+            border-radius: 6px;
+            border-width: 2px;
+            transition: .3s;
+
+            &:hover {
+                border-color: $text-color-accent;
+            }
+
+            .ld_course_grid_price {
+                background: $text-color-accent;
+                border: none;
+                text-shadow: none;
+                font-size: 16px;
+                font-family: $font-main, sans-serif;
+                line-height: 24px;
+                padding: 4px 16px;
+                border-radius: 6px;
+                box-shadow: none;
+                left: -2px;
+                top: -2px;
+                font-weight: normal;
+
+                &[class*='_$'] {
+                    background: #AAB0BA;
+                }
+
+                &.ribbon-enrolled {
+                    background: #AAB0BA;
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.trp-ls-shortcode-current-language {
+}
+
+#closelang {
+    display: none;
+}
+
+.learndash-wrapper .ld-course-status.ld-course-status-enrolled .ld-progress {
+    padding-right: 0;
+}
+
+.learndash-wrapper .ld-course-status.ld-course-status-enrolled {
+    background: $bg-body-second;
+    border-radius: 6px;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.learndash-wrapper .ld-progress .ld-progress-heading .ld-progress-stats .ld-progress-percentage {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $font-main;
+    font-weight: normal;
+    color: $text-color-main;
+    text-transform: capitalize;
+    margin-right: 32px;
+}
+
+.learndash-wrapper .ld-progress.ld-progress-inline .ld-progress-bar {
+    background: $bg-body-second;
+    margin-right: 32px;
+}
+
+.ld-progress-steps {
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color-fourth;
+}
+
+.learndash-wrapper .ld-item-list .ld-item-list-item {
+    background: $bg-body-second;
+    border-radius: 6px;
+    border: 2px solid $input-border-color;
+    padding: 14px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    transition: .3s;
+
+    &:hover {
+        background: transparent;
+        border-color: $btn-bg-color;
+
+        .ld-item-title {
+            color: $text-color-main;
+        }
+    }
+}
+
+.learndash-wrapper .ld-item-list.ld-course-list .ld-lesson-section-heading, .learndash-wrapper .ld-item-list.ld-lesson-list .ld-lesson-section-heading {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: $font-main;
+    color: $text-color-main;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    padding-left: 16px;
+}
+
+.learndash-wrapper .ld-lesson-status {
+    background-color: transparent;
+}
+
+.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-name {
+    display: flex;
+    align-items: center;
+}
+
+.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-list-item-preview .ld-status-icon {
+    border: none;
+    background: transparent;
+    margin-right: 16px;
+    margin-top: 0;
+    width: 26px;
+    height: 26px;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 26px;
+        height: 26px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.ld-status-incomplete {
+        &:before {
+            background-image: url("img/unchecklesson.svg");
+        }
+    }
+
+    &.ld-status-complete {
+        &:before {
+            background-image: url("img/checklesson.svg");
+        }
+    }
+}
+
+.learndash-wrapper .ld-status-icon.ld-status-complete .ld-icon {
+    display: none;
+}
+
+.learndash-wrapper .ld-item-list .ld-item-list-item .ld-item-list-item-preview {
+    padding: 0;
+}
+
+.learndash-wrapper .ld-status-waiting {
+    border-radius: 6px;
+    background: $disabled-text-color;
+    color: $text-color-main;
+}
+
+
+.learndash-wrapper .btn-join, .learndash-wrapper #btn-join {
+    @include btn;
+}
+
+.learndash-wrapper .ld-tabs {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.learndash-wrapper .ld-breadcrumbs {
+    background: $bg-body-third;
+    margin-bottom: 24px;
+
+    .ld-breadcrumbs-segments {
+        font-size: 16px;
+        line-height: 24px;
+        color: $btn-bg-color;
+
+        span {
+            a {
+                font-family: $font-main, sans-serif;
+                font-weight: normal;
+            }
+
+            &:last-child {
+                a {
+                    color: #778090;
+                }
+
+            }
+        }
+
+    }
+}
+
+.wp-block-group.post-lesson-content {
+    text-align: center;
+    margin-top: 64px;
+
+    ul {
+        li {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    h2 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        color: $text-color-main;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    p {
+        color: $text-color-main;
+        margin-bottom: 32px;
+    }
+}
+
+.learndash-wrapper .ld-breadcrumbs .ld-status.ld-status-complete {
+    background: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color-main;
+    font-family: $font-main;
+    font-weight: normal;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+
+    &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url("img/checklesson_balck.svg");
+        margin: 0 8px;
+    }
+}
+
+.mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls {
+    background: #333D55;
+    border-radius: 6px;
+}
+
+.learndash-wrapper .ld-content-actions {
+    border: none;
+    padding-top: 0;
+    margin-top: 32px;
+}
+
+.learndash-wrapper .ld-content-actions .ld-content-action {
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.learndash-wrapper .wpProQuiz_content ul.wpProQuiz_questionList input.wpProQuiz_questionInput {
+    display: none;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label {
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color-main;
+    font-family: $font-main;
+    font-weight: normal;
+    background: $bg-body-third;
+    transition: .3s;
+    cursor: pointer;
+
+    &.is-selected {
+        background: transparent;
+        color: $text-color-main;
+        border-color: $btn-bg-color;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: 0;
+        background: #FFFFFF;
+        border: 2px solid #E2E2E2;
+        border-radius: 100%;
+        margin-inline-end: 16px;
+        min-width: 24px;
+    }
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem.wpProQuiz_answerCorrectIncomplete label {
+    border-color: $text-color-accent;
+    background: transparent;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label.is-selected, .learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem label:focus-within {
+    &:after {
+        content: "";
+        display: block;
+        border-radius: 100%;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 26px;
+        top: 22px;
+        background: $btn-bg-color;
+        opacity: 0.3;
+    }
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_question {
+    padding-bottom: 0;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_response {
+    background: transparent;
+    padding: 0;
+    border: none;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 16px;
+    min-height: auto;
+
+    .wpProQuiz_correct {
+        background: rgba(136, 204, 187, 0.3);
+        border-radius: 6px;
+        padding: 16px 16px 16px 56px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $font-main;
+        font-weight: normal;
+        color: $text-color-main;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url("img/correct.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 16px;
+        }
+    }
+
+    .wpProQuiz_incorrect {
+        background: rgba(255, 86, 86, .4);
+        border-radius: 6px;
+        padding: 16px 16px 16px 56px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $font-main;
+        font-weight: normal;
+        color: $text-color-main;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url("img/incorrect.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 16px;
+        }
+    }
+}
+
+.wpProQuiz_content {
+    margin-bottom: 0;
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_button, .learndash-wrapper .wpProQuiz_content .wpProQuiz_button2 {
+    background: $btn-bg-color !important;
+    border-radius: 6px;
+    border: 2px solid $btn-bg-color !important;
+    transition: .3s;
+    padding: 6px 16px;
+    font-family: $font-main, sans-serif, sans-serif;
+    font-weight: normal;
+    line-height: 24px;
+    font-size: 16px;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    margin-right: 0 !important;
+    min-width: auto !important;
+
+    &:hover {
+        background: transparent !important;
+        color: $text-color-main !important;
+        opacity: 1;
+    }
+}
+
+.learndash .learndash {
+    border-bottom: 1px solid #E2E2E2;
+    margin-bottom: 32px;
+}
+
+.learndash-wrapper .ld-content-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learndash-wrapper .ld-button:focus {
+    opacity: 1;
+}
+
+.learndash-wrapper .ld-button .ld-icon {
+    transition: none;
+    transform: translateX(-3px);
+    font-size: 10px;
+    line-height: 1;
+
+    &.ld-icon-arrow-left {
+        transform: translateX(-3px);
+    }
+
+    &.ld-icon-arrow-right {
+        transform: translateX(3px);
+    }
+}
+
+
+.learndash-wrapper .ld-button, .learndash-wrapper .wpProQuiz_content a#quiz_continue_link {
+    @extend .btn;
+    border-bottom: 2px solid $btn-bg-color !important;
+    height: 48px;
+    font-family: $font-main;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    padding: 10px;
+
+    &:hover {
+        background: transparent;
+        color: $text-color-main;
+        opacity: 1;
+    }
+}
+
+.learndash-wrapper .wpProQuiz_graded_points, .learndash-wrapper .wpProQuiz_points {
+    max-width: 408px;
+    margin: 0 auto;
+    background: $disabled-text-color;
+    border-color: $disabled-text-color;
+    border-radius: 0;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: $font-main, sans-serif;
+    font-weight: normal;
+    color: $text-color-main;
+}
+
+.learndash-wrapper .ld-content-actions>a {
+    font-size: 16px;
+}
+
+.learndash-wrapper .ld-quiz-actions {
+    border: none;
+    padding-top: 0;
+    margin-bottom: 32px !important;
+}
+
+.learndash-wrapper .ld-content-actions .ld-content-action:nth-child(2) {
+    padding: 0;
+    margin: 0 24px;
+
+    a {
+        font-size: 16px;
+    }
+
+}
+
+.wpProQuiz_header {
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: $text-color-main;
+
+    & + p {
+        margin-bottom: 6px !important;
+
+    }
+}
+
+.learndash-wrapper .course_progress .sending_progress_bar, .learndash-wrapper .ld-course-status .ld-status.ld-status-complete {
+    background: transparent;
+    color: $text-color-main;
+    font-family: $font-main;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 24px;
+    display: none;
+
+    &:before {
+        content: "";
+        background-image: url(img/checklesson_balck.svg);
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+}
+
+.learndash-wrapper .wpProQuiz_content .wpProQuiz_questionListItem {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 16px;
+    padding-top: 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        label {
+            background: transparent;
+            border-color: $btn-bg-color;
+        }
+    }
+}
+
+.learndash-wrapper p.wpProQuiz_quiz_time {
+    font-size: 16px;
+    line-height: 24px;
+    color: $text-color-main;
+    font-family: $font-main, sans-serif;
+    font-weight: normal;
+}
+
+.learndash-wrapper .ld-quiz-actions input[name="reShowQuestion"], .learndash-wrapper .ld-quiz-actions input[name="restartQuiz"] {
+    background: $btn-bg-color;
+    max-height: 40px;
+    line-height: 1.4;
+}
+
+.um-account-side {
+    ul li:before {
+        display: none;
+    }
+}
+
+.um-register .um-form,
+.um-login .um-form {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+#learndash-tooltips .ld-tooltip {
+    background: $btn-bg-color;
+}
+
+.page-template-um-authorization {
+    h1 {
+        text-align: center;
+    }
+}
+
+/*---For DARK theme---*/
+
+/*
+.trfx-article-title,
+.trfx-article-text,
+.trfx-article-read-title,
+.trfx-btn-back,
+.trfx-article-read-text,
+.trfx-nav-item-title {
+    color: $text-color-main;
+}
+
+.trfx-signals-dark-theme .trfx-signals-row.trfx-signals-table-head,
+.trfx-calendar-dark-theme .trfx-calendar-row.trfx-calendar-table-head {
+    color: $text-color-main;
+}
+*/
+
+/*---For DARK theme---*/
+
+.flatpickr-months input:not([type=checkbox]) {
+    min-height: unset !important;
+}
+
+@media (max-width: 1279px) {
+    .ld-course-list-items.row {
+        margin: 0;
+
+        .ld_course_grid {
+            min-width: 300px;
+        }
+    }
+
+    .ld-course-list-items .ld_course_grid .entry-title {
+        margin-bottom: 0 !important;
+    }
+
+    .ld-course-list-items .ld_course_grid .learndash-wrapper {
+        margin-top: 32px;
+    }
+
+    .ld-course-list-items .ld_course_grid .thumbnail.course {
+        min-height: initial;
+    }
+}
+
+@media (max-width: 769px) {
+    .learndash-wrapper .ld-course-status.ld-course-status-enrolled .ld-progress {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .learndash-wrapper .ld-progress.ld-progress-inline .ld-progress-bar {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .learndash-wrapper .ld-content-actions {
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+
+    .ld-tab-content .wp-block-group.post-lesson-content p {
+        margin-bottom: 0;
+    }
+
+    .learndash-wrapper .ld-content-actions {
+
+        .ld-button {
+            margin-left: 0;
+        }
+
+        .ld-content-action {
+            margin-bottom: 24px;
+
+            &:first-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
