@@ -13,8 +13,8 @@ const ForexMcqs = () => {
       options: ['Selling euros and buying U.S. dollars', 'Borrowing in euros and buying U.S. dollars', 'Selling U.S. dollars and buying euros', 'Buying euros and U.S. dollars'],
       answer: 'Selling U.S. dollars and buying euros',
     },
-    
-  ];
+
+];
 
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);

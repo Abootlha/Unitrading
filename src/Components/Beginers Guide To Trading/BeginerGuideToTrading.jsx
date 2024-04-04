@@ -1,30 +1,45 @@
-import React from 'react'
-import './BeginerGuideToTrading.css'
-import AuthenticatedHeader from '../Header/AuthenticatedHeader'
+import React, { useEffect } from 'react';
+import './BeginerGuideToTrading.css';
 
 function BeginerGuideToTrading() {
+  useEffect(() => {
+    // Function provided by the script
+    (function(w,d,t,h,l,b,p,o,a,m){
+      w['TraducationFxObject']=o;
+      w[o]=w[o]||function(){
+        w[o].h=h;w[o].b=b;return (w[o].q=w[o].q||[]).push(arguments)
+      };
+      a=d.createElement(t),
+      m=d.getElementsByTagName(t)[0];
+      a.async=1;a.src=h+l+'?b='+b+'&amp;p='+p.join(',');
+      a.crossorigin='use-credentials';
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://embedder.traducationfx.com/','embedder.js','Y0UT3D8srRZ',['modal'],'TraducationFX');
+
+    TraducationFX('settings', 'configure', {
+      langCode: 'en',
+      traderStateKey: 'eP7gFXypBzC'
+    });
+    TraducationFX('book', 'configure', {
+      containerId: 'beginners-ebooks',
+      bookSlug: 'beginners-guide-to-trading'
+    });
+    TraducationFX('book', 'embed');
+  }, []); // Empty dependency array ensures the effect runs only once after the component mounts
+
   return (
-    
     <>
-
-    {/* <AuthenticatedHeader/> */}
-        <div className='text'>
-            <h1 className='text-ebooks'>Beginner's Guide to Trading eBook</h1>
+      {/* <AuthenticatedHeader /> */}
+      <div className='text'>
+            <h1 className='beginners-ebooks'>Beginner's Guide to Trading eBook</h1>
         </div>
-
-      <div className="trfx-ebook-panel">
-        Having trouble viewing? <a href="https://files.traducationfx.com/books/wtcuniversity/en/beginners-guide-to-trading.pdf" target="_blank">Click here</a>
-      </div>
-      <div className="trfx-ebook-subcontainer">
-        <div className="trfx-ebook-wrapper">
-          <object data="https://files.traducationfx.com/books/wtcuniversity/en/beginners-guide-to-trading.pdf#view=FitB&amp;toolbar=0&amp;scrollbar=1" type="application/pdf"  className='ebooks'>          
-            <embed src="https://files.traducationfx.com/books/wtcuniversity/en/beginners-guide-to-trading.pdf#view=FitB&amp;toolbar=0&amp;scrollbar=1" type="application/pdf" />
-          </object>
+        
+        <div>
+            <div id="beginners-ebooks" className='ebooks'>
+            </div>
         </div>
-      </div>
-
     </>
-  )
+  );
 }
 
-export default BeginerGuideToTrading
+export default BeginerGuideToTrading;

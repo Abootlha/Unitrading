@@ -1,9 +1,10 @@
-const schema =require('./database/schema.js')
-
+const schema =require('./database/schema.js');
+const session = require('express-session');
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const secretKey = "@Talha1234";
+const requireAuth = require('./authMiddleware.js');
+// const secretKey = "@Talha1234";
 const jwt = require('jsonwebtoken');
 
 const app = express();
@@ -14,6 +15,12 @@ app.use(express.json())
 // cors
 // const cors=require('cors')
 app.use(cors());
+
+app.use(session({
+  secret: '@Talha123', // Change this to your actual secret key
+  resave: false,
+  saveUninitialized: false
+}));
 
 // multer -> for files sharing
 
@@ -27,6 +34,7 @@ async function connectDB(){
         throw e
      }
 };
+
 
 
 app.get('/', (req, res) => {
@@ -46,6 +54,12 @@ app.get('/home', (req, res) => {
 
   }
   // res.send('Hello World!');
+});
+
+
+app.get('/courses', requireAuth, (req, res) => {
+  // This route requires authentication
+  res.send('Courses Page');
 });
 
 
@@ -81,6 +95,25 @@ app.post('/login', async (req, res) => {
 
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
+});
+
+
+app.post('/contact-us', async (req, res) => {
+  try {
+      const { firstname, lastname, email, subject, message } = req.body;
+      const newContactMessage = await schema.ContactUsModel({
+          firstname,
+          lastname,
+          email,
+          subject,
+          message
+      });
+      await newContactMessage.save();
+      res.status(201).json({ message: 'Contact message created successfully' });
+    
+  } catch (error) {
+      res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 // call connectDB

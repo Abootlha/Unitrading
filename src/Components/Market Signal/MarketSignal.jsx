@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 // import './MarketSignal.js'
 import './marketsignal.css'
-import AuthenticatedHeader from '../Header/AuthenticatedHeader.jsx'
+
 
 function MarketSignal() {
 

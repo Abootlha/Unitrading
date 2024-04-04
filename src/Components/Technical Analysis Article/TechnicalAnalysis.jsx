@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 // import './TechnicalAnalysis.js'
 import './TechnicalAnalysis.css'
-import AuthenticatedHeader from '../Header/AuthenticatedHeader.jsx'
+
 function TechnicalAnalysis() {
 
   useEffect(() => {

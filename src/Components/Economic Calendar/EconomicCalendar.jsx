@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './Economic.css'
 // import './Economic.js'
-import AuthenticatedHeader from '../Header/AuthenticatedHeader.jsx'
 
 function EconomicCalendar() {
   

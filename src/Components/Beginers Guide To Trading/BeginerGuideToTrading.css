@@ -1,32 +1,21 @@
 .ebooks {
     width: 90%;
-    height: 90%;
     margin: 0 auto; 
-    display: flex; 
     justify-content: center; 
     align-items: center; 
-    padding-top: 180px;
+    padding-top: 150px;
+    padding-bottom: 90px;
   }
-
-  .trfx-ebook-wrapper{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .trfx-ebook-subcontainer {
-    padding: 38%;
-    box-sizing: border-box;
-    position: relative;
-    width: 100%;
-}
 
 .text{
   font-size: 40px;
   font-weight: 800;
   margin-left: 90px;
+}
+
+.beginners-ebooks{
+  display: flex;
+  margin-top: 100px;
 }
 
 

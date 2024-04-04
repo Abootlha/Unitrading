@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import Loader from './Loader.jsx';
 // import './Crypto.js'
 import './crypto.css'
-import AuthenticationHeader from './../Header/AuthenticatedHeader.jsx'
+
 
 function CryptocurrencyCalendar() {
 

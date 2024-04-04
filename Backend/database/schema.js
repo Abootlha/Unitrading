@@ -8,10 +8,21 @@ const Users = new mongoose.Schema({
     is_verified: Boolean
 });
 
+
+const ContactUsSchema = new mongoose.Schema({
+    firstname: String,
+    lastname: String,
+    email: String,
+    subject: String,
+    message: String
+});
+
 // creating table instance
 const UserInstance = mongoose.model('Users', Users);
+const ContactUsModel = mongoose.model('ContactUs', ContactUsSchema);
 
 // export schema instance
 module.exports={
-    UserInstance
+    UserInstance,
+    ContactUsModel
 }

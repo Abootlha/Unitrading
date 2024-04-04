@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import Video_linear_card from './video_linear_card.jsx';
 import './css/TradingEssential.css'
 import Checkbox from './../../assets/images/checklesson.svg'
-import './css/TradingEssential.css'
 function MetaTrader5() {
     const { state } = useLocation();
     const { title } = state;

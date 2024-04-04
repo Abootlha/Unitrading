@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './css/login.css';
 import { useNavigate } from 'react-router-dom';
-// import Header from './Header';
+
 
 function Login({setAuthenticated}) {
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ function Login({setAuthenticated}) {
 
       if (response.ok) {
         console.log("Logged IN");
-       setAuthenticated(true)
+      localStorage.setItem("isAuthenticated",true)
 
         
     

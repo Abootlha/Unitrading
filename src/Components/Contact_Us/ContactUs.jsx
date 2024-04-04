@@ -1,36 +1,69 @@
 import React, { useState } from 'react';
 import './h1.css'
+import MessageBox from './MessageBox';
+import Map from'./../../assets/images/map.svg';
+import Phone from './../../assets/images/phone.svg';
+import Email from './../../assets/images/email.svg';
 
 
 function ContactUs() {
 
+  const [messageSent, setMessageSent] = useState(false); 
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+});
 
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    
-      const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-          ...prevState,
-          [name]: value
-        }));
-      };
-    
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+    }));
+};
 
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(formData); 
-      };
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        const response = await fetch("http://localhost:3000/contact-us", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+        if (response.ok) {
+            console.log('Message sent successfully');
+            // Reset form data
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+
+            setMessageSent(true);
+        } else {
+            console.error('Failed to send message');
+            error.ContactUs();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
     
 
 
   return (
     <div>
+
+      <div>
+      {messageSent && <MessageBox />}
+      </div>
         
     
         <main>
@@ -43,7 +76,9 @@ function ContactUs() {
               <div className="contacts-item">
                 <p className="contacts-title">Please let us know if you have any questions regarding our courses by sending us an email at:</p>
                 <div className="contacts-wrapper">
-                  <div className="icon email"></div>
+                  <div className="icon email">
+                      <img src={Email} alt="Email icon" />
+                  </div>
                   <a className="contacts-details" href="/">
                     <span className="__cf_email__" data-cfemail="15666065657a676155607b7c616774717c7b723b7c7a"></span>
                   </a>
@@ -53,7 +88,9 @@ function ContactUs() {
               <div className="contacts-item">
                 <p className="contacts-title">Phone number:</p>
                 <div className="contacts-wrapper">
-                  <div className="icon phone"></div>
+                  <div className="icon phone">
+                  <img src={Phone} alt="Phone icon" />
+                  </div>
                   <a className="contacts-details" href="tel:+61251047662+442030061606">🇦🇺 +61251047662 🇬🇧 +442030061606</a>
                 </div>
               </div>
@@ -61,7 +98,9 @@ function ContactUs() {
               <div className="contacts-item">
                 <p className="contacts-title">Company details</p>
                 <div className="contacts-wrapper">
-                  <div className="icon details"></div>
+                  <div className="icon details">
+                  <img src={Map} alt="Map icon" />
+                  </div>
                   <p className="contacts-details">General Market Project EOOD, 121 Prodromou Avenue, Nicosia 2064, Cyprus</p>
                 </div>
               </div>

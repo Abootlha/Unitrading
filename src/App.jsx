@@ -8,11 +8,12 @@ import Refundpolicy from './Components/RefundPolicy/Refundpolicy.jsx'
 import CookiesPolicy from './Components/CookiePolicy/CookiesPolicy.jsx'
 import ContactUs from './Components/Contact_Us/ContactUs.jsx';
 import Login from './Components/login'
-// import Header from './Components/Header'
-import AuthenticatedHeader from './Components/Header/AuthenticatedHeader.jsx';
-import LogoutHeader from './Components/Header/LogoutHeader.jsx';
+import Header from './Components/Header'
+import CheckoutPage from './Components/CheckoutPage/Checkout.jsx';
 
-// import Header from './Components/Header/Header.jsx';
+
+// import AuthenticatedHeader from './Components/Header/AuthenticatedHeader.jsx';
+// import LogoutHeader from './Components/Header/LogoutHeader.jsx';
 
 import Footer from './Components/Footer'
 import ForgotPassword from './Components/Forgot_Password/ForgotPassword.jsx';
@@ -168,6 +169,8 @@ import TradeElliotWave from './Components/Strategic_Trading/TradeElliotWave.jsx'
 import RulesOfUsingElliotWave from './Components/Strategic_Trading/RulesOfUsingElliotWave.jsx';
 import HighProbabilitySetup from './Components/Strategic_Trading/HighProbabilitySetup.jsx';
 
+import TechnicalTrading from './Components/video_courses/TechnicalTrading.jsx';
+
 
 
 
@@ -183,7 +186,7 @@ import HighProbabilitySetup from './Components/Strategic_Trading/HighProbability
 
 function App() {
   const [count, setCount] = useState(0)
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(localStorage.getItem("isAuthenticated"));
 
   const shouldShowHeader = ![
     // '/courses',
@@ -201,9 +204,8 @@ function App() {
     <div>
 
 
-{/* {shouldShowHeader && <Header authenticated={authenticated} />} */}
+ {shouldShowHeader && <Header authenticated={localStorage.getItem("isAuthenticated")} />}
 
-{shouldShowHeader && (authenticated ? <AuthenticatedHeader /> : <LogoutHeader />)}
 
 
 
@@ -235,6 +237,12 @@ function App() {
       <Route path="/Terms-and-conditions" element={<TermsAndConditions/>} />
       <Route path="/Privacy-policy" element={<PrivacyPolicy/>} />
 
+
+{/*-----------------------------Checkout-page--------------------------------*/}
+
+
+      <Route path="/Checkout-page" element={<CheckoutPage />} />
+
 {/*-----------------------------Video courses--------------------------------*/}
 
 
@@ -244,6 +252,8 @@ function App() {
       <Route path="/courses/meta-trader-5" element={<MetaTrader5 />} />
       <Route path="/courses/meta-trader-4" element={<MetaTrader4 />} />
       <Route path="/courses/strategic-trading" element={<StrategicTrading />} />
+      <Route path="/courses/technical-trading" element={<TechnicalTrading />} />
+
       <Route path="/courses/trading-essential/what-is-forex" element={<Forex />} />
       <Route path="/courses/trading-essential/what's-a-cfd" element={<Cfd />} />
       <Route path="/courses/trading-essential/what's-a-commodity" element={<Commodity />} />

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 // import './Marketvideos.js'
 import './marketvideos.css'
-import AuthenticatedHeader from '../Header/AuthenticatedHeader.jsx'
+
 
 function MarketVideos() {
 
