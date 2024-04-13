@@ -14,6 +14,7 @@ import Hero from './../../assets/images/hero.jpg'
 import Courses from './../../assets/images/CoursesBg.svg'
 import PackageMarkcorrect from './../../assets/images/packages-mark-disabled.svg'
 import PackageMarkWrong from './../../assets/images/packages-mark.svg'
+import Carausel from './../Carausel/carausel.jsx';
 
 
 
@@ -291,13 +292,11 @@ import PackageMarkWrong from './../../assets/images/packages-mark.svg'
         </div>
     </section>
 
-  
-        
- 
-        
-        
+     
 
         </main>
+
+        <Carausel/>
 
 
         

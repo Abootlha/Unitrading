@@ -28,8 +28,8 @@ return (
                 <p>EBooks</p>
                 <div className='cardsCont'>
                     <CourseCont title="Beginner's Guide to Trading" imgUrl='https://unitrading.io/wp-content/themes/learn5/img/ebook-beginner-v3.svg'  route='/beginners-guide-to-trading-ebook'/>
-                    <CourseCont title='Advanced Guide to Trading' imgUrl='https://unitrading.io/wp-content/themes/learn5/img/ebook-beginner-v3.svg'  route='advanced-guide-to-trading'/>
-                    <CourseCont title='Guide to Cryptocurrencies' imgUrl='https://unitrading.io/wp-content/themes/learn5/img/ebook-beginner-v3.svg'  route='guide-to-cryptocurrencies'/>
+                    <CourseCont title='Advanced Guide to Trading' imgUrl='https://unitrading.io/wp-content/themes/learn5/img/ebook-beginner-v3.svg'  route='/advanced-guide-to-trading-ebook'/>
+                    <CourseCont title='Guide to Cryptocurrencies' imgUrl='https://unitrading.io/wp-content/themes/learn5/img/ebook-beginner-v3.svg'  route='/guide-to-cryptocurrencies-ebook'/>
                 </div>
             </div>
         

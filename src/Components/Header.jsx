@@ -59,8 +59,8 @@ function Header(isAuthenticated) {
                                         <a aria-current="page">eBooks</a>
                                         <ul className="submenu">
                                             <li><a href="/beginners-guide-to-trading-ebook">Beginner's Guide to Trading</a></li><br />
-                                            <li><a href="/">Advanced Guide to Trading</a></li><br />
-                                            <li><a href="/">Guide to Cryptocurrencies</a></li><br />
+                                            <li><a href="/advanced-guide-to-trading-ebook">Advanced Guide to Trading</a></li><br />
+                                            <li><a href="/guide-to-cryptocurrencies-ebook">Guide to Cryptocurrencies</a></li><br />
                                             {/* Add more eBooks as needed */}
                                         </ul>
                                     </li>

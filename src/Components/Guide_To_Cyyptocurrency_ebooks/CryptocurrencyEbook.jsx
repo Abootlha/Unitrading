@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import './AdvancedGuideToTrading.css'
+import './CryptocurrencyEbook.css'
 
-function AdvancedGuideToTrading() {
+function CryptocurrencyEbook() {
     useEffect(() => {
-        // Define the function to call
+        // Function provided by the script
         function initializeTraducationFX() {
             (function(w,d,t,h,l,b,p,o,a,m){
                 w['TraducationFxObject']=o;
@@ -19,8 +19,8 @@ function AdvancedGuideToTrading() {
             });
 
             TraducationFX('book', 'configure', {
-                containerId: 'advanced-ebooks',
-                bookSlug: 'advanced-guide-to-trading'
+                containerId: 'crypto-ebooks',
+                bookSlug: 'cryptocurrencies'
             });
 
             TraducationFX('book', 'embed');
@@ -36,17 +36,19 @@ function AdvancedGuideToTrading() {
     }, []);
   return (
     <>
-
-        <div className='text'>
-            <h1 className='advanced-ebooks'>Advanced Guide to Trading eBook</h1>
+    
+    <div className='text'>
+            <h1 className='crypto-ebooks'>Guide to Cryptocurrencies eBook</h1>
         </div>
         
         <div>
-            <div id="advanced-ebooks" className='ebooks'>
+            <div id="crypto-ebooks" className='ebooks'>
             </div>
         </div>
+    
+    
     </>
-  ); 
+  )
 }
 
-export default AdvancedGuideToTrading
+export default CryptocurrencyEbook

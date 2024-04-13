@@ -181,7 +181,8 @@ import TechnicalTrading from './Components/video_courses/TechnicalTrading.jsx';
 
 // import AuthenticatedHeader from './Components/Header/AuthenticatedHeader.jsx'
 // import LogoutHeader from './Components/Header/LogoutHeader.jsx'
-// import AdvancedGuideToTrading from './Components/Advanced_Guide_To_Trading_ebook/AdvancedGuideToTrading.jsx';
+import AdvancedGuideToTrading from './Components/Advanced_Guide_To_Trading_ebook/AdvancedGuideToTrading.jsx';
+import CryptocurrencyEbook from './Components/Guide_To_Cyyptocurrency_ebooks/CryptocurrencyEbook.jsx';
 
 
 
@@ -219,7 +220,8 @@ function App() {
       <Route path="/carausel" element={<Carousel />} />
       <Route path="/courses" element={<Courses />} />
       <Route path="/beginners-guide-to-trading-ebook" element={<BeginerGuideToTrading />} />
-      {/* <Route path="/advanced-guide-to-trading-ebook" element={<AdvancedGuideToTrading />} /> */}
+      <Route path="/advanced-guide-to-trading-ebook" element={<AdvancedGuideToTrading />} />
+      <Route path="/guide-to-cryptocurrencies-ebook" element={<CryptocurrencyEbook />} />
       <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
       <Route path="/Forgot-Password" element={<ForgotPassword />} />
 
