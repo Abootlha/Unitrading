@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/BalanceAndEquityQuiz.jsx'
 function BalanceAndEquity() {
   return (
     <>
@@ -17,7 +17,7 @@ function BalanceAndEquity() {
       </video>
     </div>
     
-    
+    <Mcqs/>
     
     </>
   )

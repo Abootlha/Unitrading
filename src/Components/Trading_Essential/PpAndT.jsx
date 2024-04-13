@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/PpAndTQuiz.jsx'
 function PpAndT() {
   return (
     <>
@@ -17,7 +17,7 @@ function PpAndT() {
       </video>
     </div>
     
-    
+    <Mcqs/>
     
     </>
   )

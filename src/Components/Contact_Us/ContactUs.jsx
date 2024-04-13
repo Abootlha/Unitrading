@@ -120,7 +120,7 @@ const handleSubmit = async (e) => {
                 <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
 
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} />
+                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} required/>
 
                 <label htmlFor="message">Message *</label>
                 <textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Type your message here..." required></textarea>

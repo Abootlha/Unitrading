@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/PendingOrdersQuiz.jsx'
 function PendingOrders() {
   return (
     <>
@@ -16,6 +16,7 @@ function PendingOrders() {
   </video>
 </div>
     
+    <Mcqs/>
     
     </>
   )

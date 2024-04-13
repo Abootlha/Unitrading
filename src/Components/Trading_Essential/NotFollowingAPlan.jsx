@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/NotFollowingAPlanQuiz.jsx'
 function NotFollowingAPlan() {
   return (
     <>
@@ -16,6 +16,7 @@ function NotFollowingAPlan() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/MiningQuiz.jsx'
 function Mining() {
   return (
     <>
@@ -16,6 +16,7 @@ function Mining() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

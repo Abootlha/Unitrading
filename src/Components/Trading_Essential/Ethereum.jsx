@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/EhereumQuiz.jsx'
 function Ethereum() {
   return (
     <>
@@ -14,6 +14,7 @@ function Ethereum() {
         Your browser does not support the video tag.
       </video>
     </div>
+    <Mcqs/>
     </>
   )
 }

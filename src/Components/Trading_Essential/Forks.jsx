@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/ForkQuiz.jsx'
 function Forks() {
   return (
     <>
@@ -16,6 +16,7 @@ function Forks() {
       </video>
     </div>
     
+    <Mcqs/>
     </>
   )
 }

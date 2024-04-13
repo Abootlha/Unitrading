@@ -1,5 +1,6 @@
 import React from 'react'
 import './heading.css'
+import Mcqs from './MCQs/BullAndBearQuiz.jsx'
 
 function BullAndBear() {
   return (
@@ -15,6 +16,8 @@ function BullAndBear() {
         Your browser does not support the video tag.
       </video>
     </div>
+
+    <Mcqs/>
     
     </>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import './heading.css'
+import Mcqs from './MCQs/ShareQuiz.jsx'
 function Share() {
   return (
     <>
@@ -15,6 +16,7 @@ function Share() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/LeverageAndMarginQuiz.jsx'
 function LeverageAndMargins() {
   return (
     <>
@@ -15,6 +15,8 @@ function LeverageAndMargins() {
     Your browser does not support the video tag.
   </video>
 </div>
+
+<Mcqs/>
     
     </>
   )

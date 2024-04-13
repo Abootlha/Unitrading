@@ -15,6 +15,8 @@ import CheckoutPage from './Components/CheckoutPage/Checkout.jsx';
 // import AuthenticatedHeader from './Components/Header/AuthenticatedHeader.jsx';
 // import LogoutHeader from './Components/Header/LogoutHeader.jsx';
 
+import Carousel from './Components/Carausel/carausel.jsx';
+
 import Footer from './Components/Footer'
 import ForgotPassword from './Components/Forgot_Password/ForgotPassword.jsx';
 import CryptocurrencyCalendar from './Components/Cryptocurrency Calendar/CryptocurrencyCalendar.jsx'
@@ -73,7 +75,7 @@ import HotWallet from './Components/Trading_Essential/HotWallet.jsx';
 import ColdWallet from './Components/Trading_Essential/ColdWallet.jsx';
 import ChooseTheRightWallet from './Components/Trading_Essential/ChooseTheRightWallet.jsx';
 // import QuizComponent from './Components/QuizComponent.jsx';
-import ForexMcqs from './Components/Trading_Essential/Forex_MCQs/ForexMcqs.jsx';
+
 import MetaTrader5Mobile from './Components/video_courses/MetaTrader5Mobile.jsx';
 import IphoneApplicationOverview from './Components/MetaTrading_5_Mobile/IphoneApplicationOverview.jsx';
 import IphoneLoginExistingAccount from './Components/MetaTrading_5_Mobile/IphoneLoginExistingAccount.jsx';
@@ -214,6 +216,7 @@ function App() {
     {/* <Navigation /> */}
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/carausel" element={<Carousel />} />
       <Route path="/courses" element={<Courses />} />
       <Route path="/beginners-guide-to-trading-ebook" element={<BeginerGuideToTrading />} />
       {/* <Route path="/advanced-guide-to-trading-ebook" element={<AdvancedGuideToTrading />} /> */}
@@ -256,9 +259,9 @@ function App() {
 
       <Route path="/courses/trading-essential/what-is-forex" element={<Forex />} />
       <Route path="/courses/trading-essential/what's-a-cfd" element={<Cfd />} />
-      <Route path="/courses/trading-essential/what's-a-commodity" element={<Commodity />} />
-      <Route path="/courses/trading-essential/what's-an-index" element={<Index />} />
-      <Route path="/courses/trading-essential/what's-a-share" element={<Share />} />
+      <Route path="/courses/trading-essential/what’s-a-commodity" element={<Commodity />} />
+      <Route path="/courses/trading-essential/what’s-an-index" element={<Index />} />
+      <Route path="/courses/trading-essential/what’s-a-share" element={<Share />} />
       <Route path="/courses/trading-essential/balance-and-equity" element={<BalanceAndEquity />} />
       <Route path="/courses/trading-essential/pips,-points,-and-ticks" element={<PpAndT />} />
       <Route path="/courses/trading-essential/bull-and-bear-market" element={<BullAndBear />} />
@@ -276,7 +279,7 @@ function App() {
       <Route path="/courses/trading-essential/what-is-ecn" element={<ECN  />} />
       <Route path="/courses/trading-essential/how-are-ecn-brokers-different" element={<EcnBrokersDifferent   />} />
       <Route path="/courses/trading-essential/advantages-of-ecn" element={<AdvantageOfEcn  />} />
-      <Route path="/courses/trading-essential/what's-a-cryptocurrency" element={<Cryptocurrency  />} />
+      <Route path="/courses/trading-essential/what’s-a-cryptocurrency" element={<Cryptocurrency  />} />
       <Route path="/courses/trading-essential/stablecoins" element={<Stablecoins  />} />
       <Route path="/courses/trading-essential/blockchain" element={<BlockChain  />} />
       <Route path="/courses/trading-essential/-mining" element={<Mining  />} />

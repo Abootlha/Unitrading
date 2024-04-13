@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/TradingWithoutRiskControlQuiz.jsx'
 function TradingWithoutRiskControl() {
   return (
     <>
@@ -16,7 +16,7 @@ function TradingWithoutRiskControl() {
       </video>
     </div>
     
-    
+    <Mcqs/>
     
     </>
   )

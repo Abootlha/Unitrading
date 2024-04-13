@@ -1,5 +1,6 @@
 import React from 'react'
 import './heading.css'
+import Mcqs from './MCQs/IndexQuiz.jsx'
 
 function Index() {
   return (
@@ -15,6 +16,8 @@ function Index() {
         Your browser does not support the video tag.
       </video>
     </div>
+
+    <Mcqs/>
     
     </>
   )

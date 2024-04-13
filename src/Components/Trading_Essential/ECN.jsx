@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/ECNQuiz.jsx'
 function ECN() {
   return (
     <>
@@ -16,7 +16,7 @@ function ECN() {
       </video>
     </div>
     
-    
+    <Mcqs/>
     
     </>
   )

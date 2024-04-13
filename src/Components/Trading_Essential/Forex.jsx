@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-import Mcqs from './Forex_MCQs/ForexMcqs.jsx'
+import Mcqs from './MCQs/ForexMcqs.jsx'
 
 function Forex() {
   return (

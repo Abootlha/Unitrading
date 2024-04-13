@@ -1,5 +1,6 @@
 import React from 'react'
 import './heading.css'
+import Mcqs from './MCQs/TradingEmotionallyQuiz.jsx'
 function TradingEmotionally() {
   return (
     <>
@@ -15,6 +16,7 @@ function TradingEmotionally() {
   </video>
 </div>
     
+    <Mcqs/>
     
     </>
   )

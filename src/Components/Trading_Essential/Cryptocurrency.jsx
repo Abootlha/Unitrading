@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/CryptocurrencyQuiz.jsx'
 function Cryptocurrency() {
   return (
     <>
@@ -17,6 +17,7 @@ function Cryptocurrency() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/RibbleQuiz.jsx'
 function Ripple() {
   return (
     <>
@@ -16,6 +16,7 @@ function Ripple() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

@@ -1,39 +1,38 @@
 import React, { useState } from 'react';
-import AlertBox from './../../Quiz_AlertBox/AlertBox.jsx';
-import './Quiz.css'; 
-
-const ForexMcqs = () => {
-  const [selectedOption, setSelectedOption] = useState('');
-  const [isCorrect, setIsCorrect] = useState(null);
-  const [answered, setAnswered] = useState(false);
-
-  const quizData = [
-    {
-      questions: 'When you buy EUR/USD, you are basically…',
-      options: ['Selling euros and buying U.S. dollars', 'Borrowing in euros and buying U.S. dollars', 'Selling U.S. dollars and buying euros', 'Buying euros and U.S. dollars'],
-      answer: 'Selling U.S. dollars and buying euros',
-    },
-
-];
-
+import AlertBox from '../../Quiz_AlertBox/AlertBox.jsx';
+import './../QuizCSS/Quiz.css'; 
+function ShareQuiz() {
+    const [selectedOption, setSelectedOption] = useState('');
+    const [isCorrect, setIsCorrect] = useState(null);
+    const [answered, setAnswered] = useState(false);
+  
+    const quizData = [
+      {
+        questions: 'A share is a unit of investment in…',
+        options: ['Currency pairs','Commodities','Companies'],
+        answer: 'Companies',
+      },
+  
+  ];
+  
   const handleOptionChange = (e) => {
-    setSelectedOption(e.target.value);
-  };
-
-  const handleCheckAnswer = () => {
-    if (answered) return;
-    const currentQuestion = quizData.find((question) => question.answer === selectedOption);
-    if (currentQuestion) {
-      setIsCorrect(true);
-    } else {
-      setIsCorrect(false);
-    }
-    setAnswered(true);
-  };
-
+      setSelectedOption(e.target.value);
+    };
+  
+    const handleCheckAnswer = () => {
+      if (answered) return;
+      const currentQuestion = quizData.find((question) => question.answer === selectedOption);
+      if (currentQuestion) {
+        setIsCorrect(true);
+      } else {
+        setIsCorrect(false);
+      }
+      setAnswered(true);
+    };
   return (
-
-   <div>
+    <>
+    
+    <div>
     <h1 className='Quiz'>Quiz</h1>
     <div className="quiz-container">
       <div className="quiz-content">
@@ -68,7 +67,10 @@ const ForexMcqs = () => {
       </div>
     </div>
     </div>
-  );
-};
+    
+    
+    </>
+  )
+}
 
-export default ForexMcqs;
+export default ShareQuiz

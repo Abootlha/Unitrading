@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/AveragingDownQuiz.jsx'
 function AveragingDown() {
   return (
     <>
@@ -16,6 +16,7 @@ function AveragingDown() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

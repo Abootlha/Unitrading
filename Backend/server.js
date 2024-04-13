@@ -27,7 +27,7 @@ app.use(session({
 app.use(cors());
 async function connectDB(){
     try {
-        await mongoose.connect('mongodb+srv://unitTrading:UnitTrading123@cluster0.i4kxub1.mongodb.net/', {})
+        await mongoose.connect('mongodb://unitTrading:UnitTrading123@ac-3anvuvs-shard-00-00.i4kxub1.mongodb.net:27017,ac-3anvuvs-shard-00-01.i4kxub1.mongodb.net:27017,ac-3anvuvs-shard-00-02.i4kxub1.mongodb.net:27017/?ssl=true&replicaSet=atlas-ljrxmz-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0', {})
         console.log('Connected to the database.');
     }catch (e) {
         console.log('Error connecting to the database. and the Exception is '+e);

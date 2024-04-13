@@ -1,5 +1,6 @@
 import React from 'react'
 import './heading.css'
+import Mcqs from './MCQs/CFDQuiz.jsx'
 
 function Cfd() {
   return (
@@ -16,6 +17,7 @@ function Cfd() {
       </video>
     </div>
     
+    <Mcqs/>
     
     </>
   )

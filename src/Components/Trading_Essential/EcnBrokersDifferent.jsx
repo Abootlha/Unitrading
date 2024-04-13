@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/ECNBrokkersDifferentQuiz.jsx'
 function EcnBrokersDifferent() {
   return (
     <>
@@ -16,6 +16,7 @@ function EcnBrokersDifferent() {
       </video>
     </div>
     
+    <Mcqs/>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/BlockchainQuiz.jsx'
 function BlockChain() {
   return (
     <>
@@ -15,6 +15,8 @@ function BlockChain() {
         Your browser does not support the video tag.
       </video>
     </div>
+
+    <Mcqs/>
 
     </>
   )

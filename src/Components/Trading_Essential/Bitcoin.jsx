@@ -1,6 +1,6 @@
 import React from 'react'
 import './heading.css'
-
+import Mcqs from './MCQs/BitcoinQuiz.jsx'
 function Bitcoin() {
   return (
     <>
@@ -15,7 +15,7 @@ function Bitcoin() {
         Your browser does not support the video tag.
       </video>
     </div>
-    
+    <Mcqs/>
     </>
   )
 }
