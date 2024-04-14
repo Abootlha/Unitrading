@@ -6,6 +6,7 @@ import CloseIcon from './../assets/images/close.svg'
 import './css/HomePage.css'
 import './css/submenu.css'
 
+
 function Header(isAuthenticated) {
     
     const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +17,19 @@ function Header(isAuthenticated) {
         setIsOpen(!isOpen);
     };
 
+    // auth token
+    const token = localStorage.getItem('token');
+    const headers = { Authorization: token};
+
     const handleLogout = () => {
         // Remove authentication status from browser storage
-    
         localStorage.removeItem("isAuthenticated");
-
-        console.log(true)
+        localStorage.removeItem("token");
         window.location.href = '/';
+
+
     };
+
 
     return (
         <>
@@ -44,7 +50,7 @@ function Header(isAuthenticated) {
                                 <ul id="menu-header" className="header-menu">
                                     {/* Add authenticated user menu items here */}
                                     <li className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-62">
-                                        <a aria-current="page">Video Courses</a>
+                                        <a aria-current="page" style={{fontWeight:'550'}}>Video Courses</a>
                                         <ul className="submenu">
                                             <li><a href="/">Trading Essentials</a></li><br />
                                             <li><a href="/">Technical Trading</a></li><br />
@@ -56,7 +62,7 @@ function Header(isAuthenticated) {
                                         </ul>
                                     </li>
                                     <li className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-62">
-                                        <a aria-current="page">eBooks</a>
+                                        <a aria-current="page" style={{fontWeight:'550'}}>eBooks</a>
                                         <ul className="submenu">
                                             <li><a href="/beginners-guide-to-trading-ebook">Beginner's Guide to Trading</a></li><br />
                                             <li><a href="/advanced-guide-to-trading-ebook">Advanced Guide to Trading</a></li><br />
@@ -65,7 +71,7 @@ function Header(isAuthenticated) {
                                         </ul>
                                     </li>
                                     <li className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-62">
-                                        <a aria-current="page">Market Research</a>
+                                        <a aria-current="page" style={{fontWeight:'550'}}>Market Research</a>
                                         <ul className="submenu">
                                             <li><a href="/Market-videos">Market Research Videos</a></li><br />
                                             <li><a href="/Technical-Analysis-article">Technical Analysis Articles</a></li><br />
@@ -78,7 +84,7 @@ function Header(isAuthenticated) {
                                     </li>
                                     {/* Add more menu items as needed */}
                                     <li className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-62">
-                                        <a aria-current="page">Account</a>
+                                        <a aria-current="page" style={{fontWeight:'550'}}>Account</a>
                                             <ul className="submenu">
                                                 <li><a href="/">Profile</a></li><br />
                                                 <li><a onClick={handleLogout}>Logout</a></li><br />
@@ -87,18 +93,18 @@ function Header(isAuthenticated) {
                                 </ul>
                             ) : (
                                 // Non-authenticated user menu
-                                <ul id="menu-header" className="header-menu">
+                                <ul id="menu-header" className="header-menu" >
                                     <li id="menu-item-60" className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-60">
-                                        <a href="/#process" aria-current="page">Process</a>
+                                        <a href="/#process" aria-current="page" style={{fontWeight:'550'}}>Process</a>
                                     </li>
                                     <li id="menu-item-61" className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-61">
-                                        <a href="/#academy" aria-current="page">Features</a>
+                                        <a href="/#academy" aria-current="page" style={{fontWeight:'550'}}>Features</a>
                                     </li>
                                     <li id="menu-item-62" className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-62">
-                                        <a href="/#packages" aria-current="page">Packages</a>
+                                        <a href="/#packages" aria-current="page" style={{fontWeight:'550'}}>Packages</a>
                                     </li>
                                     <li id="menu-item-63" className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-63">
-                                        <a href="/#testimonials" aria-current="page">Testimonials</a>
+                                        <a href="/#testimonials" aria-current="page" style={{fontWeight:'550'}}>Testimonials</a>
                                     </li>
                                 </ul>
                             )}

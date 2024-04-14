@@ -4,9 +4,9 @@ import './h1.css'
 
 function PrivacyPolicy() {
 
-  const ListItem = ({ children }) => {
-    return <li>{children}</li>;
-  };
+  // const ListItem = ({ children }) => {
+  //   return <li>{children}</li>;
+  // };
 
   return (
     <div>

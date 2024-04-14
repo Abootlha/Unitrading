@@ -3,8 +3,9 @@ const session = require('express-session');
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
-const requireAuth = require('./authMiddleware.js');
+
 // const secretKey = "@Talha1234";
+const jwt_secret="gvbdjknflmt637yreufjncjnegwu46ee8ehnc4uuiye8tfhijcen87wt48egbfuyvcg4e87fc";
 const jwt = require('jsonwebtoken');
 
 const app = express();
@@ -22,7 +23,31 @@ app.use(session({
   saveUninitialized: false
 }));
 
-// multer -> for files sharing
+
+function requireAuth(req, res, next) {
+
+  const token = req.headers.authorization;
+
+  if (!token) {
+    console.log('Token is missing, redirecting to login page');
+    
+    return res.redirect('/login');
+  }
+
+
+  try {
+    const decoded = jwt.verify(token, jwt_secret); 
+    console.log()
+ 
+    next();
+  } catch (error) {
+    console.log('Token is invalid, redirecting to login page');
+    // Token is invalid, redirect to login page
+    return res.redirect('/login');
+  }
+}
+
+
 
 app.use(cors());
 async function connectDB(){
@@ -59,6 +84,7 @@ app.get('/home', (req, res) => {
 
 app.get('/courses', requireAuth, (req, res) => {
   // This route requires authentication
+  console.log("i am in courses route");
   res.send('Courses Page');
 });
 
@@ -83,7 +109,8 @@ app.post('/login', async (req, res) => {
       }
 
       // Generate JWT token
-      const token = jwt.sign({ userId: user._id, email: user.email }, 'your-secret-key', { expiresIn: '1h' }); // Change 'your-secret-key' to your actual secret key
+      const token = jwt.sign({ userId: user._id, email: user.email }, jwt_secret, { expiresIn: '1h' });
+      console.log("This is token", token) // Change 'your-secret-key' to your actual secret key
 
       // Send token to the client
       res.status(200).json({ message: "Login successful", token });
@@ -93,9 +120,28 @@ app.post('/login', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
-});
+app.get('/logout',async (req, res)=>{
+  // decode token, then find user and set user token to null ''
+  // after decode you will get user id and email, fetch that user and set its token to ''
+
+  const token = req.headers.authorization;
+  const decoded = jwt.verify(token, jwt_secret); 
+  
+
+  const { userId, email } = decoded;
+
+  const user = await schema.UserInstance.findById(userId);
+
+  if (!user) {
+    return res.status(404).send("User not found");
+  }
+
+  
+  
+  await user.save();
+  res.send("logged out successfully");
+})
+
 
 
 app.post('/contact-us', async (req, res) => {
@@ -114,6 +160,10 @@ app.post('/contact-us', async (req, res) => {
   } catch (error) {
       res.status(500).json({ error: 'Internal server error' });
   }
+});
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
 });
 
 // call connectDB

@@ -1,10 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CourseCont from './courseCont';
 import './css/courses.css'
 import './Technical Analysis Article/TechnicalAnalysis.js'
 // import Header from './../Components/Header/AuthenticatedHeader.jsx';
+import { useNavigate } from 'react-router-dom';
 
 function Courses() {
+    const [courses,setCourses]=useState([]);
+    const token = localStorage.getItem('token');
+    const headers = { Authorization: token};
+    const navigate = useNavigate();
+
+    // console.log(req.headers);
+
+    useEffect(() => {
+        if(!localStorage.getItem("isAuthenticated")){
+            navigate('/login')
+           }
+
+    
+    }, []);
+
 
 return (
     <>

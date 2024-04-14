@@ -40,9 +40,10 @@ function Login({setAuthenticated}) {
 
       if (response.ok) {
         console.log("Logged IN");
-      localStorage.setItem("isAuthenticated",true)
-
-        
+        const res=await response.json();
+        localStorage.setItem("token",res.token)
+        localStorage.setItem("isAuthenticated",true)
+      
     
         navigate("/courses");
       } else {

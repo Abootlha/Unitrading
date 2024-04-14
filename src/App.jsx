@@ -12,6 +12,7 @@ import Header from './Components/Header'
 import CheckoutPage from './Components/CheckoutPage/Checkout.jsx';
 
 
+
 // import AuthenticatedHeader from './Components/Header/AuthenticatedHeader.jsx';
 // import LogoutHeader from './Components/Header/LogoutHeader.jsx';
 
@@ -27,6 +28,7 @@ import TechnicalAnalysis from './Components/Technical Analysis Article/Technical
 import MarketSignal from './Components/Market Signal/MarketSignal.jsx'
 import MarketNews from './Components/Market News/MarketNews.jsx'
 import MarketVideos from './Components/Market Research Videos/MarketVideos.jsx'
+
 import Forex from './Components/Trading_Essential/Forex.jsx';
 import TradingEssential from './Components/video_courses/TradingEssential.jsx';
 import Cfd from './Components/Trading_Essential/Cfd.jsx';
@@ -208,7 +210,7 @@ function App() {
 
 
  {shouldShowHeader && <Header authenticated={localStorage.getItem("isAuthenticated")} />}
-
+  
 
 
 
@@ -218,6 +220,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/carausel" element={<Carousel />} />
+
       <Route path="/courses" element={<Courses />} />
       <Route path="/beginners-guide-to-trading-ebook" element={<BeginerGuideToTrading />} />
       <Route path="/advanced-guide-to-trading-ebook" element={<AdvancedGuideToTrading />} />
