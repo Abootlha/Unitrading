@@ -23,6 +23,7 @@ function Header(isAuthenticated) {
 
     const handleLogout = () => {
         // Remove authentication status from browser storage
+        event.preventDefault();
         localStorage.removeItem("isAuthenticated");
         localStorage.removeItem("token");
         window.location.href = '/';
@@ -87,7 +88,7 @@ function Header(isAuthenticated) {
                                         <a aria-current="page" style={{fontWeight:'550'}}>Account</a>
                                             <ul className="submenu">
                                                 <li><a href="/">Profile</a></li><br />
-                                                <li><a onClick={handleLogout}>Logout</a></li><br />
+                                                <li><a href= '#' onClick={handleLogout}>Logout</a></li><br />
                                             </ul>
                                     </li>
                                 </ul>

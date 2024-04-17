@@ -192,6 +192,8 @@ import CryptocurrencyEbook from './Components/Guide_To_Cyyptocurrency_ebooks/Cry
 function App() {
   const [count, setCount] = useState(0)
   const [authenticated, setAuthenticated] = useState(localStorage.getItem("isAuthenticated"));
+  const [price, setPrice] = useState(' ');
+  const [plan, setPlan] = useState(' ');
 
   const shouldShowHeader = ![
     // '/courses',
@@ -218,7 +220,7 @@ function App() {
     <Router>
     {/* <Navigation /> */}
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<HomePage setPrice={setPrice} setPlan={setPlan} />} />
       <Route path="/carausel" element={<Carousel />} />
 
       <Route path="/courses" element={<Courses />} />
@@ -249,7 +251,7 @@ function App() {
 {/*-----------------------------Checkout-page--------------------------------*/}
 
 
-      <Route path="/Checkout-page" element={<CheckoutPage />} />
+      <Route path="/Checkout-page" element={<CheckoutPage price={price} plan={plan}/>} />
 
 {/*-----------------------------Video courses--------------------------------*/}
 

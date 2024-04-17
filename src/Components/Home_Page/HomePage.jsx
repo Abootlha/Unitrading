@@ -23,7 +23,7 @@ import Packages from '../Packages/Packages.jsx';
 
 
 
-    function HomePage() {
+    function HomePage({setPrice,setPlan}) {
 
 
 
@@ -136,7 +136,7 @@ import Packages from '../Packages/Packages.jsx';
       </div>
     </div>
         
-            <Packages/>
+            <Packages setPrice={setPrice} setPlan={setPlan}/>
 
      
 

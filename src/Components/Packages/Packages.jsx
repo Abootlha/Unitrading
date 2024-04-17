@@ -1,8 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './../css/HomePage.css'
+import { useNavigate } from 'react-router-dom';
 
-function Packages() {
-    
+
+function Packages({ packageId, setPrice, setPlan }) {
+    const navigate = useNavigate(); // Get navigate function from useNavigate
+
+  // Define function to handle package click
+  const handlePackageClick = (packageId) => {
+    // Redirect to another route with packageId as a parameter
+    event.preventDefault();
+    if (packageId  === 1){
+            setPrice('€299')
+            setPlan('Beginner Plan  × 1')
+    } else
+    if (packageId === 2){
+        setPrice('€499')
+        setPlan('Intermediate Plan  × 1')
+    } else
+    if (packageId === 3){
+            setPrice('€999')
+            setPlan('Advanced Plan  × 1')
+    }else
+    if (packageId === 4){
+            setPrice('€2499')
+            setPlan('Trader Plan  × 1')
+    }else
+    if (packageId === 5){
+            setPrice('€4999')
+            setPlan('Elite Plan  × 1')
+    }
+    // console.log(price);
+    navigate(`/checkout-page`);
+  };
+
   return (  
     <>
     {!localStorage.getItem("isAuthenticated") ? (
@@ -41,7 +72,7 @@ function Packages() {
                             <li>47 Lessons</li>
                             <li>1 Hour Study Time</li>
                         </ul>
-                        <a className="btn_wide" href="/">Buy Package</a>
+                        <a className="btn_wide" href='' onClick={() => handlePackageClick(1)}>Buy Package</a>
                     </div>
                                     <div class="packages__item ">
                         <div className="packages__header">
@@ -69,7 +100,7 @@ function Packages() {
                             <li>104 Lessons</li>
                             <li>2 Hours Study Time</li>
                         </ul>
-                        <a className="btn_wide" href="/">Buy Package</a>
+                        <a className="btn_wide" href='' onClick={() => handlePackageClick(2)}>Buy Package</a>
                     </div>
     
                                     <div className="packages__item ">
@@ -98,7 +129,7 @@ function Packages() {
                             <li>104 Lessons</li>
                             <li>2 Hours Study Time</li>
                         </ul>
-                        <a className="btn_wide" href="/">Buy Package</a>
+                        <a className="btn_wide" href='' onClick={() => handlePackageClick(3)}>Buy Package</a>
                     </div>
     
                                     <div className="packages__item ">
@@ -127,7 +158,7 @@ function Packages() {
                             <li>104 Lessons</li>
                             <li>5 Hours Study Time</li>
                         </ul>
-                        <a className="btn_wide" href="/">Buy Package</a>
+                        <a className="btn_wide" href='' onClick={() => handlePackageClick(4)}>Buy Package</a>
                     </div>
     
                     <div className="packages__item ">
@@ -156,7 +187,7 @@ function Packages() {
                             <li>155 Lessons</li>
                             <li>10 Hours Study Time</li>
                         </ul>
-                        <a className="btn_wide" href="/">Buy Package</a>
+                        <a className="btn_wide" href='' onClick={() => handlePackageClick(5)}>Buy Package</a>
                     </div>
                 </div>
             </div>
