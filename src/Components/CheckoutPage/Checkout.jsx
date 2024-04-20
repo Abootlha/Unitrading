@@ -655,6 +655,10 @@ a:hover
   const [keepSignedIn, setKeepSignedIn] = useState(false);
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [showCuponitem, setShowCuponitem] = useState(false);
+//   const [plan, setPlan] = useState(sessionStorage.getItem('plan') || '');
+//   const [price, setPrice] = useState(sessionStorage.getItem('price') || '');
+
+
 
   const handleInputChange = (event, inputType) => {
     const inputValue = event.target.value;
@@ -720,7 +724,105 @@ a:hover
 	event.preventDefault();
     setShowCuponitem(!showCuponitem);
   };
+
+
+//   useEffect(() => {
+// 	console.log('New props.plan:', props.plan);
+// 	const newPlan = props.plan || '';
+// 	console.log('Setting plan:', newPlan);
+// 	if (newPlan !== plan) { 
+// 	  setPlan(newPlan);
+// 	  sessionStorage.setItem('plan', newPlan);
+// 	}
+//   }, [props.plan, plan]); 
   
+//   useEffect(() => {
+// 	console.log('New props.price:', props.price);
+// 	const newPrice = props.price || '';
+// 	console.log('Setting price:', newPrice);
+// 	if (newPrice !== price) { 
+// 	  setPrice(newPrice);
+// 	  sessionStorage.setItem('price', newPrice);
+// 	}
+//   }, [props.price, price]); 
+
+  
+
+
+  const [messageSent, setMessageSent] = useState(false); 
+  const [formData, setFormData] = useState({
+	Country: '',
+    firstName: '',
+    lastName: '',
+	StreetAddress: '',
+	TownOrCity: '',
+	StateOrCountry: '',
+	PostCodeOrZIP: '',
+    EmailAddress: '',
+	PhoneNumber: '',
+    plan: props.plan,
+    price: props.price,
+	Payment_Status: false,
+});
+
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+    }));
+};
+
+
+
+const handlecheckout = async (e) => {
+    e.preventDefault();
+
+	for (const key in formData) {
+		if (formData.hasOwnProperty(key) && formData[key] === '') {
+			console.error('Please fill out all the checkout fields.');
+			return; // Exit the function if any field is empty
+		}
+	}
+	
+    try {
+        const res = await fetch("http://localhost:3000/checkout-page", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+        if (res.ok) {
+            // Reset form data
+            setFormData({
+                Country: '',
+				firstName: '',
+				lastName: '',
+				StreetAddress: '',
+				TownOrCity: '',
+				StateOrCountry: '',
+				PostCodeOrZIP: '',
+				EmailAddress: '',
+				PhoneNumber: '',
+				plan: props.plan,
+				price: props.price,
+				Payment_Status: false,
+            });
+
+            setMessageSent(true);
+        } else {
+            console.error('Failed to send message');
+            error.CheckoutPage();
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+};
+
+
+
+
     return (
         
         <div>
@@ -788,31 +890,31 @@ a:hover
           </div>
 		  )}
           <div className="row">
-            <form method="get">
+            <form onSubmit={handlecheckout}>
               <div className="col-7 col">
                 <h3 className="topborder"><span>Billing Details</span></h3>
                 <label htmlFor="country">Country</label>
-                <select name="country" id="country" required>
-                  <option value="">Please select a country</option>
+                <select name="Country" id="Country" value={formData.Country} onChange={handleChange} required>
+                  <option>Please select a country</option>
                   <option value="Canada">Canada</option>
                   <option value="Not Canada">Not Canada</option>
                 </select>
                 <div className="width50 padright">
                   <label htmlFor="fname">First Name</label>
-                  <input type="text" name="fname" id="fname" required />
+                  <input type="text" name="firstName" id="firstName" value={formData.firstName} onChange={handleChange} required />
                 </div>
                 <div className="width50">
                   <label htmlFor="lname">Last Name</label>
-                  <input type="text" name="lname" id="lname" required />
+                  <input type="text" name="lastName" id="lastName" value={formData.lastName} onChange={handleChange} required />
                 </div>
                 <label htmlFor="company">Street Address</label>
-                <input type="text" name="company" id="company" required />
+                <input type="text" name="StreetAddress" id="StreetAddress" value={formData.StreetAddress} onChange={handleChange} required />
                 <label htmlFor="address"> Town / City</label>
-                <input type="text" name="address" id="address" required />
+                <input type="text" name="TownOrCity" id="TownOrCity" value={formData.TownOrCity} onChange={handleChange} required />
                 <div className="width50 padright">
                   <label htmlFor="province">State / Country</label>
-                  <select name="province" id="province" required>
-                    <option value="">Select an option...</option>
+                  <select name="StateOrCountry" id="StateOrCountry" value={formData.StateOrCountry} onChange={handleChange} required>
+                    <option>Select an option...</option>
                     <option value="ab">Alberta</option>
                     <option value="bc">British Columbia</option>
                     <option value="mb">Manitoba</option>
@@ -828,18 +930,18 @@ a:hover
                 </div>
                 <div className="width50">
                   <label htmlFor="postcode">Postcode / ZIP</label>
-                  <input type="text" name="postcode" id="postcode" placeholder="" required />
+                  <input type="text" name="PostCodeOrZIP" id="PostCodeOrZIP" value={formData.PostCodeOrZIP} onChange={handleChange} placeholder="" required />
                 </div>
                 <div className="width50 padright">
                   <label htmlFor="email">Email Address</label>
-                  <input type="text" name="email" id="email" required />
+                  <input type="text" name="EmailAddress" id="EmailAddress" value={formData.EmailAddress} onChange={handleChange} required />
                 </div>
                 <div className="width50">
                   <label htmlFor="tel">Phone</label>
-                  <input type="text" name="tel" id="tel" required />
+                  <input type="text" name="PhoneNumber" id="PhoneNumber" value={formData.PhoneNumber}onChange={handleChange} required />
                 </div>
               </div>
-            </form>
+			  </form>
             {/* New table section */}
             
         <div className="row">
@@ -875,6 +977,7 @@ a:hover
 
 
             </div>
+			<form method="post" onSubmit={handlecheckout}>
 			<div className="payment-box" style={{ backgroundColor: '#d1d3d7', padding: '20px', borderRadius: '10px', minWidth: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column', marginTop: '3%' }}>
 				<div style={{ flex: 1 }}>
 					<p>Payment Method</p>
@@ -883,10 +986,10 @@ a:hover
 					<label className="checkbox-label"><input type="checkbox" name="refund_policy" required />I have read and agree to the <a href="/Refund" style={{ color: '#0B86FF' }}> refund policy </a></label>
 				</div>
 				<div style={{ alignSelf: 'flex-end' }}>
-					<button className="button" style={{ backgroundColor: '#0B86FF', border: 'none', color: 'white', padding: '15px 32px', textAlign: 'center', textDecoration: 'none', fontSize: '16px', cursor: 'pointer', borderRadius: '8px' }}>Place Order</button>
+					<button className="button" type='submit'  style={{ backgroundColor: '#0B86FF', border: 'none', color: 'white', textAlign: 'center', textDecoration: 'none', fontSize: '16px', cursor: 'pointer', borderRadius: '8px' }}>Place Order</button>
 				</div>
-			</div>
-            
+			</div> 
+			</form>
           </div>
         </div>
       </div>

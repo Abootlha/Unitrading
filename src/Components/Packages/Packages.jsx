@@ -34,6 +34,8 @@ function Packages({ packageId, setPrice, setPlan }) {
     navigate(`/checkout-page`);
   };
 
+  
+
   return (  
     <>
     {!localStorage.getItem("isAuthenticated") ? (

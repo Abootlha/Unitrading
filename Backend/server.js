@@ -67,6 +67,34 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+
+app.post('/checkout-page', async(req,res) =>{
+
+  try {
+  const { Country,firstname, lastname,StreetAddress, TownOrCity,StateOrCountry,PostCodeOrZIP, EmailAddress, PhoneNumber, plan, price , Payment_Status }= req.body;
+  const newCheckout = await schema.CheckoutSchemaModel({
+    Country,
+    firstname,
+    lastname,
+    StreetAddress, 
+    TownOrCity,
+    StateOrCountry,
+    PostCodeOrZIP, 
+    EmailAddress, 
+    PhoneNumber , 
+    plan, 
+    price , 
+    Payment_Status
+
+  });
+  await newCheckout.save();
+  res.status(201).json({ message: 'your Checkout details are stored' });
+} catch (error) {
+  res.status(500).json({ error: 'Internal server error' });
+}
+});
+
+
 app.get('/home', (req, res) => {
   console.log(req.url)
   if(user.role=="admin"){
