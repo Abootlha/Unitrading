@@ -762,7 +762,6 @@ a:hover
 	PhoneNumber: '',
     plan: props.plan,
     price: props.price,
-	Payment_Status: false,
 });
 
 const handleChange = (e) => {
@@ -784,16 +783,30 @@ const handlecheckout = async (e) => {
 			return; // Exit the function if any field is empty
 		}
 	}
+
+	// Validate form fields
+	const validationErrors = {};
+	for (const key in formData) {
+		if (formData.hasOwnProperty(key) && formData[key] === '') {
+			validationErrors[key] = 'This field is required';
+		}
+	}
+
+	if (Object.keys(validationErrors).length > 0) {
+		setErrors(validationErrors);
+		return;
+	}
+
 	
     try {
-        const res = await fetch("http://localhost:3000/checkout-page", {
+        const response = await fetch("http://localhost:3000/checkout-page", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(formData)
         });
-        if (res.ok) {
+        if (response.ok) {
             // Reset form data
             setFormData({
                 Country: '',
@@ -807,7 +820,6 @@ const handlecheckout = async (e) => {
 				PhoneNumber: '',
 				plan: props.plan,
 				price: props.price,
-				Payment_Status: false,
             });
 
             setMessageSent(true);
@@ -986,7 +998,7 @@ const handlecheckout = async (e) => {
 					<label className="checkbox-label"><input type="checkbox" name="refund_policy" required />I have read and agree to the <a href="/Refund" style={{ color: '#0B86FF' }}> refund policy </a></label>
 				</div>
 				<div style={{ alignSelf: 'flex-end' }}>
-					<button className="button" type='submit'  style={{ backgroundColor: '#0B86FF', border: 'none', color: 'white', textAlign: 'center', textDecoration: 'none', fontSize: '16px', cursor: 'pointer', borderRadius: '8px' }}>Place Order</button>
+					<button className="button" type='submit'  style={{ backgroundColor: '#0B86FF', border: 'none', color: 'white', textAlign: 'center', width: '100%', textDecoration: 'none', fontSize: '16px', cursor: 'pointer', borderRadius: '8px' }}>Place Order</button>
 				</div>
 			</div> 
 			</form>

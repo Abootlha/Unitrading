@@ -1,0 +1,15 @@
+.progressBar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.progressItem {
+    width: 20px; /* Adjust as needed */
+    height: 20px; /* Adjust as needed */
+    background-color: #ccc; /* Default color */
+    margin-right: 5px;
+}
+
+.progressItem.completed {
+    background-color: green; /* Completed color */
+}

@@ -3,6 +3,7 @@ const session = require('express-session');
 const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 // const secretKey = "@Talha1234";
 const jwt_secret="gvbdjknflmt637yreufjncjnegwu46ee8ehnc4uuiye8tfhijcen87wt48egbfuyvcg4e87fc";
@@ -71,7 +72,7 @@ app.get('/', (req, res) => {
 app.post('/checkout-page', async(req,res) =>{
 
   try {
-  const { Country,firstname, lastname,StreetAddress, TownOrCity,StateOrCountry,PostCodeOrZIP, EmailAddress, PhoneNumber, plan, price , Payment_Status }= req.body;
+  const { Country,firstname, lastname,StreetAddress, TownOrCity,StateOrCountry,PostCodeOrZIP, EmailAddress, PhoneNumber, plan, price }= req.body;
   const newCheckout = await schema.CheckoutSchemaModel({
     Country,
     firstname,
@@ -84,11 +85,38 @@ app.post('/checkout-page', async(req,res) =>{
     PhoneNumber , 
     plan, 
     price , 
-    Payment_Status
 
   });
   await newCheckout.save();
   res.status(201).json({ message: 'your Checkout details are stored' });
+} catch (error) {
+  res.status(500).json({ error: 'Internal server error' });
+}
+});
+
+
+app.post('/register', async(req,res) =>{
+
+  try {
+  const { firstName, lastName,country,Phone, email, password, Payment_Status }= req.body;
+
+  const existingUser = await schema.RegisterSchemaModel.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ error: 'User already exists' });
+        }
+
+  const newRegister = await schema.RegisterSchemaModel({
+    firstName,
+    lastName,
+    country,
+    Phone,
+    email,
+    password,
+    Payment_Status,
+
+  });
+  await newRegister.save();
+  res.status(201).json({ message: 'your Registration details are stored' });
 } catch (error) {
   res.status(500).json({ error: 'Internal server error' });
 }
@@ -120,33 +148,34 @@ app.get('/courses', requireAuth, (req, res) => {
 
 
 app.post('/login', async (req, res) => {
-  console.log(req.url);
-  const { email, password } = req.body;
+    const { email, password, Payment_Status } = req.body;
 
-  try {
-      // Check if user exists in the database
-      const user = await schema.UserInstance.findOne({ email });
+    try {
+        const userRegister = await schema.RegisterSchemaModel.findOne({ email });
+        
 
-      if (!user) {
-          return res.status(404).json({ message: "User not found" });
-      }
+        if (!userRegister) {
+            return res.status(404).json({ message: "User not found" });
+        }
 
-      // Check if the password is correct
-      if (user.password !== password) {
-          return res.status(401).json({ message: "Invalid credentials" });
-      }
+        const passwordMatch = await bcrypt.compare(password, userRegister.password);
+        if (!passwordMatch) {
+            return res.status(401).json({ message: "Invalid credentials" });
+        }
 
-      // Generate JWT token
-      const token = jwt.sign({ userId: user._id, email: user.email }, jwt_secret, { expiresIn: '1h' });
-      console.log("This is token", token) // Change 'your-secret-key' to your actual secret key
+        if (!userRegister.Payment_Status) {
+            return res.status(403).json({ message: "Payment not completed" });
+        }
 
-      // Send token to the client
-      res.status(200).json({ message: "Login successful", token });
-  } catch (error) {
-      console.error("Error logging in:", error);
-      return res.status(500).json({ message: "Internal server error" });
-  }
+        const token = jwt.sign({ userId: userRegister._id, email: userRegister._id }, jwt_secret, { expiresIn: '1h' });
+
+        res.status(200).json({ message: "Login successful", token });
+    } catch (error) {
+        console.error("Error logging in:", error);
+        return res.status(500).json({ message: "Internal server error" });
+    }
 });
+
 
 app.get('/logout',async (req, res)=>{
   // decode token, then find user and set user token to null ''

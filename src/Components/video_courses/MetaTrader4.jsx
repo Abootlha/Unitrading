@@ -10,7 +10,7 @@ function MetaTrader4() {
     const { title } = state;
 
     const titles = ['Terminal Window', 'Opening an Order','Creating a Pending Order','Closing an Order','Setting a Stop Loss and Take Profit','Using a Trailing Stop','One-Click Trading','Adding Indicators to the Chart'];
- 
+    
   return (
     <>
     <div className='Container'>

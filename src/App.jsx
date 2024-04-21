@@ -10,6 +10,7 @@ import ContactUs from './Components/Contact_Us/ContactUs.jsx';
 import Login from './Components/login'
 import Header from './Components/Header'
 import CheckoutPage from './Components/CheckoutPage/Checkout.jsx';
+import Register from './Components/Register_Page/Register.jsx';
 
 
 
@@ -252,6 +253,12 @@ function App() {
 
 
       <Route path="/Checkout-page" element={<CheckoutPage price={price} plan={plan}/>} />
+
+{/*-----------------------------Register Page--------------------------------*/}
+
+
+      <Route path="/register" element={<Register />} />
+
 
 {/*-----------------------------Video courses--------------------------------*/}
 
