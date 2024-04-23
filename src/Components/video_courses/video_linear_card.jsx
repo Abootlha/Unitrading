@@ -6,9 +6,13 @@ function Video_linear_card(props) {
     const navigate = useNavigate();
     const handleRoute=()=>{
         // create route
-        var route=props.title.toLowerCase().replace(/\s/g, '-')
+        const route=props.title.toLowerCase().replace(/\s/g, '-')
         // handle route
         navigate(route);
+
+        if (props.onClick) {
+          props.onClick();
+      }
     }
   return (
     <div className='video_linear_card' onClick={handleRoute}>

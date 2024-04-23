@@ -26,6 +26,7 @@ function Header(isAuthenticated) {
         event.preventDefault();
         localStorage.removeItem("isAuthenticated");
         localStorage.removeItem("token");
+        localStorage.removeItem("progress");
         window.location.href = '/';
 
 

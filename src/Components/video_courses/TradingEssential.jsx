@@ -32,7 +32,7 @@ function TradingEssential() {
             </div>
         </div>
         <div>
-            <h3 className='heading2'>Terminalogy</h3>
+            <h3 className='heading2'>Terminology</h3>
             <div className='content'>
                 {titles1.map(title =>(
                     <Video_linear_card title={title} imgUrl={Checkbox} />
