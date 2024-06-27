@@ -3384,7 +3384,7 @@ form + .ld-course-step-back {
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
-  ackground-color: linear-gradient(92.46deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 96.14%) !important;
+  background-color: linear-gradient(92.46deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 96.14%) !important;
 }
 
 .select2-container--open .select2-dropdown--below {
