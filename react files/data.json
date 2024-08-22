@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "feedback": "EFFICIENT",
+        "feedbackParagraph": "These online trading classes are excellent! They're organized in a way that's simple to understand. I'll never forget the suggestion to practice before doing real trading. It is worthwhile for anyone trying to learn and improve their trading skills. Thank you very much!",
+        "Trading_Experience": "Trading Experience: 3 Years | ",
+        "Preferred_markets": "Preferred Markets: Stocks and Forex Majors",
+        "name": "Schneider",
+        "professions": "Engineer / ",
+        "Country": "Germany"
+    },
+    {
+        "id": 2,
+        "feedback": "GREAT CONTENT!",
+        "feedbackParagraph": "This is the most effective online trading education program I've encountered. I was initially apprehensive because previous courses had failed to provide me with the information required to better my trading abilities. These courses are unique. Videos are both interactive and informative. I've opted to implement all of the ideas, and I'm looking forward to seeing the greatest outcomes possible.",
+        "Trading_Experience": "Trading Experience: 4 Months | ",
+        "Preferred_markets": "Preferred Markets: Indices and Forex",
+        "name": "Mohammed",
+        "professions": "Digital Marketer / ",
+        "Country": "Leicester, UK"
+    },
+    {
+        "id": 3,
+        "feedback": "DELIGHTED",
+        "feedbackParagraph": "I'm delighted about these courses because they have many benefits.  They cover every major facet of trading. The team behind them explains why doing it yourself is so important. This is never a waste of money, and I would recommend it to those who do not want to lose.",
+        "Trading_Experience": "Trading Experience: 8 Months | ",
+        "Preferred_markets": "Preferred Markets: Stocks",
+        "name": "Louis",
+        "professions": "Entrepreneur / ",
+        "Country": "France"
+    },
+    {
+        "id": 4,
+        "feedback": "QUITE USEFUL",
+        "feedbackParagraph": "For a long time, I've been interested in mastering the art of trading. The facilitators on this platform were really helpful in explaining day trading. These classes make it obvious that financial markets are volatile and that trading entails risk. The best part for me is how to manage risk even before you start trading.",
+        "Trading_Experience": "Trading Experience: 6 Months | ",
+        "Preferred_markets": "Preferred Markets: Indices",
+        "name": "Alfred",
+        "professions": "UI/UX Designer / ",
+        "Country": "Denmark"
+    },
+    {
+        "id": 5,
+        "feedback": "QUDOS",
+        "feedbackParagraph": "When compared to other courses I've taken, these ones have aided my trading career. It was challenging to manage previous courses to the point where completion was impossible. These classes, on the other hand, are direct and insightful. The strategic course is amazing. I say kudos to the experienced teachers.",
+        "Trading_Experience": "Trading Experience: 2 Years | ",
+        "Preferred_markets": "Preferred Markets: Forex and Stocks",
+        "name": "Gabriel",
+        "professions": "Security Officer / ",
+        "Country": "Switzerland"
+    },
+    {
+        "id": 6,
+        "feedback": "WELL DONE!",
+        "feedbackParagraph": "The team in charge of these courses is clearly not only competent but also experienced. The information offered is sufficient for me, especially when compared with what other platforms are offering. I'm excited about meeting my short-and long-term financial objectives.",
+        "Trading_Experience":"Trading Experience: 2 Years | ",
+        "Preferred_markets": "Preferred Markets: Commodities and Stocks",
+        "name": "Luca",
+        "professions": "Writer / ",
+        "Country": "Italy"
+    }
+]

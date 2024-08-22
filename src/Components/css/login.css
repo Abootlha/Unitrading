@@ -1,0 +1,74 @@
+.container.content {
+  text-align: center;
+}
+
+.container.content h1 {
+  font-weight: 800;
+  font-size: 50px;
+}
+
+
+/* .um-field-label label {
+  border-bottom: 1px solid blue;
+} */
+
+.um-form-field {
+  margin-bottom: 20px;
+}
+
+.um-field-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.um-button {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.um-left.um-half {
+  float: left;
+  width: 50%;
+}
+
+.um-right.um-half {
+  float: right;
+  width: 50%;
+}
+
+.um-clear {
+  clear: both;
+}
+
+.um-col-alt {
+  position: relative; 
+}
+
+.um-col-alt .um-left.um-half,
+.um-col-alt .um-right.um-half {
+  width: 100%; 
+}
+
+.um-col-alt .um-right.um-half {
+  float: none; 
+  text-align: right; 
+}
+.um {
+  margin-top: 110px; 
+  padding-bottom: 80px;
+}
+
+.um-field-label {
+  text-align: left; 
+}
+
+/* .um-field-checkbox label {
+  margin-right: 10px;
+} */
+
+.um-field-checkbox input[type="checkbox"] {
+  margin-right: -19px; 
+  display: block;
+  border: 1px solid #fff;
+}
+

@@ -1,0 +1,64 @@
+.register-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    padding-top: 90px;
+  }
+  
+  .heading {
+    margin-right: 80px;
+    text-align: center !important;
+    justify-content: center !important;
+    font-weight: 700;
+    padding-bottom: 40px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="Phone"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"] {
+    width: 100px; /* Adjust width as needed */
+    height: 45px;
+    padding: 5px;
+    background-color: #0B86FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto; /* Align button to the right */
+    display: block; /* Ensure the button is on its own line */
+  }
+  
+  select {
+    width: 100%;
+    padding: 12px; /* Increase padding */
+    height: 48px; /* Increase height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333" width="24" height="24"><path d="M7 10l5 5 5-5H7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px;
+    padding-right: 30px;
+  }
+  
+
+  label{
+    font-weight: lighter;
+  }
+
+  .placeholder-option {
+    color: #aaa; /* Or any lighter color you prefer */
+}

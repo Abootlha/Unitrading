@@ -1,0 +1,54 @@
+.custom-button-primary {
+    background-color: #fff;
+    color: #2C2F32;
+    border: 2px solid #0B86FF;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  .custom-button-primary:hover {
+    background-color: #0B86FF !important;
+    color: #fff !important;
+  }
+  
+  .custom-button-secondary {
+    background-color: transparent;
+    color: #2C2F32;
+    border: 2px solid #0B86FF;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .custom-button-secondary:hover {
+    background-color: #0B86FF !important;
+    color: #fff !important;
+  }
+
+  .custom-icon{
+    border: 2px solid #0B86FF;
+    border-radius: 10px;
+    width: 50px;
+    height: 40px;
+    padding: 10px;
+    margin-right: 40px;
+    margin-left: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .custom-button-primary,
+    .custom-button-secondary {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 1198px){
+    .custom-icon{
+        display: none;
+    }
+  }
+
+
+  

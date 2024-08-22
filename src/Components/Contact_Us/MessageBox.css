@@ -1,0 +1,20 @@
+.heading {
+    text-align: center; /* Center-align the content */
+}
+
+.message-box {
+    background-color: #b4d39b;
+    padding: 20px;
+    border-radius: 5px;
+    color: #000; /* Text color */
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 40%;
+    margin: 0 auto 20px;
+    
+    
+}
+
+.centered {
+    text-align: center; /* Center-align the text */
+}

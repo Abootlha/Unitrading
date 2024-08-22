@@ -1,0 +1,24 @@
+.ebooks {
+    width: 90%;
+    margin: 0 auto; 
+    justify-content: center; 
+    align-items: center; 
+    padding-top: 150px;
+    padding-bottom: 90px;
+  }
+
+.text{
+  font-size: 40px;
+  font-weight: 800;
+  margin-left: 90px;
+}
+
+.beginners-ebooks{
+  display: flex;
+  margin-top: 100px;
+}
+
+
+
+
+  

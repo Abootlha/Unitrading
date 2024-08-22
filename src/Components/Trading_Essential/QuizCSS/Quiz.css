@@ -1,0 +1,65 @@
+.quiz-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .quiz-content {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr; /* Display content in a single column */
+    grid-template-rows: repeat(4, auto); /* Set 4 rows with auto height */
+    gap: 10px; /* Add gap between rows */
+  }
+  
+  .option {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 10px; /* Adjust spacing between rows */
+  }
+  
+  .option input[type="radio"] {
+    margin-right: 50px; /* Adjust spacing between radio button and options */
+    margin-bottom: 10px;
+    border-width: 2px;
+
+  }
+
+  .option input[type="radio"]::before {
+    background-color: #0b86ff !important; /* Change inner color of radio button */
+  }
+  
+  .message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+ 
+ /* Quiz.css */
+.check-answer-button {
+  background-color: #0b86ff;
+  color: #fff;
+  border: 2px solid #0b86ff;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  width: 90px;
+  border-radius: 10px;
+  height: 50px;
+  align-self: flex-end;
+}
+
+.check-answer-button:hover {
+  background-color: #fff;
+  color: #000;
+  
+}
+
+.Quiz{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+}

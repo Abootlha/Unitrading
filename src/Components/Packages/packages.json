@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "plan": "Beginner Plan × 1",
+      "price": "€249"
+    },
+    {
+      "id": 2,
+      "plan": "Intermediate Plan × 1",
+      "price": "€499"
+    },
+    {
+      "id": 3,
+      "plan": "Advanced Plan × 1",
+      "price": "€999"
+    },
+    {
+      "id": 4,
+      "plan": "Trader Plan × 1",
+      "price": "€2,499"
+    },
+    {
+      "id": 5,
+      "plan": "Elite Plan  × 1",
+      "price": "€4,999"
+    }
+  ]
+  
