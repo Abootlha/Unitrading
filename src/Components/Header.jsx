@@ -119,7 +119,7 @@ function Header(isAuthenticated) {
                         <div className="header-buttons">
                             <ul id="menu-um-nav" className="header-students">
                                 <li id="menu-item-782" className="studentLogin__button menu-item menu-item-type-post_type menu-item-object-page menu-item-782">
-                                    <a href="/login">Student Login</a>
+                                    <a href="unitrading-d8bgz4znh-abootlhas-projects.vercel.app/login">Student Login</a>
                                 </li>
                                 <li id="menu-item-783" className="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-783">
                                     <a href="/#packages" aria-current="page">Buy Package</a>
